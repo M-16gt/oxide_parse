@@ -1,0 +1,2933 @@
+{
+  "meta": {
+    "started_utc": "2026-11-17T13:08:50.833708+00:00",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 190 Stepping 0, GenuineIntel",
+    "cpu_count": 4,
+    "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+    "repeat": 7,
+    "cooldown_sec": 1.0,
+    "libraries": {
+      "oxide_parse": "0.1.0",
+      "frostwork": "0.2.2",
+      "selectolax": "1.0.2",
+      "lxml": "6.1.3",
+      "parsel": "1.12.1",
+      "scrapling": "0.5.1",
+      "bs4": "4.15.0"
+    },
+    "mode": "full",
+    "skipped": {
+      "selectolax [modest]": "Modest backend is deprecated since selectolax 1.0. The engine has not been updated since 2021, while lexbor has been available since 2021 and is actively developed. Modest is outdated, not maintained, contains bugs and does not follow modern HTML5 standards. Please use lexbor backend instead: `from selectolax.lexbor import LexborHTMLParser`. The APIs are nearly identical, so in most projects swapping the import is all that's needed."
+    },
+    "errors": {},
+    "native_sha256": "5e871eb4c5511fbd57c58447e980d2afc2bc7e86c8eae7dcdea474db1cadada0",
+    "engines": [
+      "scraper",
+      "lite",
+      "stream",
+      "json"
+    ],
+    "suite_sha256": {
+      "competitors.py": "0253e0014e4d1ca3a3e6759ec779ef3f83bc9dac98dda00cd4b7feae14697d16",
+      "generators.py": "7bac700155f341f512e43b20ac9d8b43c049f0b911835a354004d15b827a533e",
+      "run_all_benchmarks.py": "e41838da4fc4493f3828943ca67fa9668ed6e3258a5338d7ae40a7bcadf5bdaf",
+      "suite_scenarios.py": "c6ad6fe52fa8fd4a630c229f7197588e47ee5745e355fcd45f496d7de04dc4ad"
+    },
+    "build_config_sha256": {
+      "pyproject.toml": "69fbffc16299ad0ccbd09a73cfc8bf081e806d11e7c8c276dabf721f8da2f18f",
+      "Cargo.toml": "812d3b95e3eee4ab568bdab3dfb1a41add48a3db731c29c1077ba5376fda00b1",
+      "Cargo.lock": "c802001c8017581762a105d38861259e1d8cf279a3c5b9da1bf7cfa663ce322f",
+      "crates/py/Cargo.toml": "6aa766a86a5637ba9b18cb5154254060e26318638a11dfde310eb94a9279f858"
+    },
+    "updated_utc": "2026-11-17T13:14:20.347686+00:00"
+  },
+  "sections": [
+    {
+      "scenario": "01_catalog_scaling",
+      "label": "Catalog n=100, noise=False (24.6 KiB)",
+      "n_products": 100,
+      "noise": false,
+      "bytes": 25155,
+      "timings": {
+        "oxide_parse [scraper]": {
+          "min_ms": 1.3356,
+          "median_ms": 1.5774,
+          "mean_ms": 1.6747,
+          "iqr_ms": 0.5494,
+          "max_ms": 2.4087,
+          "samples_ms": [
+            1.7882,
+            1.5774,
+            2.4087,
+            1.3448,
+            1.3356,
+            1.374,
+            1.8942
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "oxide_parse [lite]": {
+          "min_ms": 0.5165,
+          "median_ms": 0.5563,
+          "mean_ms": 0.6011,
+          "iqr_ms": 0.1139,
+          "max_ms": 0.8327,
+          "samples_ms": [
+            0.6034,
+            0.8327,
+            0.6379,
+            0.524,
+            0.5563,
+            0.537,
+            0.5165
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "oxide_parse [stream]": {
+          "min_ms": 0.4487,
+          "median_ms": 0.5715,
+          "mean_ms": 0.5687,
+          "iqr_ms": 0.1852,
+          "max_ms": 0.6848,
+          "samples_ms": [
+            0.6848,
+            0.5715,
+            0.6485,
+            0.4633,
+            0.4487,
+            0.5964,
+            0.5678
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "selectolax [lexbor]": {
+          "min_ms": 2.4592,
+          "median_ms": 3.0213,
+          "mean_ms": 3.1401,
+          "iqr_ms": 1.4045,
+          "max_ms": 4.345,
+          "samples_ms": [
+            3.9343,
+            4.345,
+            3.0425,
+            2.6488,
+            2.5298,
+            3.0213,
+            2.4592
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "frostwork": {
+          "min_ms": 0.7267,
+          "median_ms": 0.8986,
+          "mean_ms": 1.0776,
+          "iqr_ms": 0.6386,
+          "max_ms": 1.7493,
+          "samples_ms": [
+            0.8986,
+            0.9184,
+            1.7493,
+            0.8877,
+            0.8619,
+            1.5005,
+            0.7267
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "lxml [direct]": {
+          "min_ms": 4.8048,
+          "median_ms": 5.8861,
+          "mean_ms": 6.2182,
+          "iqr_ms": 1.4197,
+          "max_ms": 9.1234,
+          "samples_ms": [
+            9.1234,
+            6.4875,
+            5.8861,
+            4.8048,
+            5.2831,
+            6.6812,
+            5.2615
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "parsel": {
+          "min_ms": 12.3578,
+          "median_ms": 14.8832,
+          "mean_ms": 17.743,
+          "iqr_ms": 5.1546,
+          "max_ms": 29.6013,
+          "samples_ms": [
+            18.8687,
+            19.549,
+            29.6013,
+            14.3944,
+            12.3578,
+            14.8832,
+            14.5467
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "scrapling": {
+          "min_ms": 18.4989,
+          "median_ms": 21.4816,
+          "mean_ms": 24.1451,
+          "iqr_ms": 10.0927,
+          "max_ms": 32.7931,
+          "samples_ms": [
+            26.449,
+            32.7931,
+            21.4816,
+            18.4989,
+            19.4352,
+            20.8301,
+            29.5279
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "bs4 + lxml": {
+          "min_ms": 34.4092,
+          "median_ms": 40.9517,
+          "mean_ms": 45.0123,
+          "iqr_ms": 18.575,
+          "max_ms": 55.5282,
+          "samples_ms": [
+            55.5282,
+            55.1462,
+            40.9517,
+            34.4092,
+            36.5712,
+            39.0137,
+            53.4659
+          ],
+          "repeat": 7,
+          "validated": true
+        }
+      },
+      "native_breakdown": {
+        "scraper": {
+          "total_ms": 1.5838,
+          "rust_native_ms": 1.5425,
+          "difference_ms": 0.0413,
+          "timings": {
+            "extract": {
+              "min_ms": 1.2893,
+              "median_ms": 1.5838,
+              "mean_ms": 1.6927,
+              "iqr_ms": 0.3641,
+              "max_ms": 2.304,
+              "samples_ms": [
+                1.5838,
+                1.53,
+                1.5131,
+                1.8772,
+                1.2893,
+                2.304,
+                1.7515
+              ],
+              "repeat": 7,
+              "validated": true
+            },
+            "run_native": {
+              "min_ms": 1.2228,
+              "median_ms": 1.5425,
+              "mean_ms": 1.5749,
+              "iqr_ms": 0.2581,
+              "max_ms": 2.1209,
+              "samples_ms": [
+                2.1209,
+                1.6948,
+                1.4559,
+                1.4367,
+                1.2228,
+                1.5425,
+                1.5506
+              ],
+              "repeat": 7,
+              "validated": true
+            }
+          }
+        },
+        "lite": {
+          "total_ms": 0.6405,
+          "rust_native_ms": 0.5593,
+          "difference_ms": 0.0812,
+          "timings": {
+            "extract": {
+              "min_ms": 0.571,
+              "median_ms": 0.6405,
+              "mean_ms": 0.722,
+              "iqr_ms": 0.0991,
+              "max_ms": 1.2147,
+              "samples_ms": [
+                0.571,
+                0.7161,
+                1.2147,
+                0.6683,
+                0.6261,
+                0.617,
+                0.6405
+              ],
+              "repeat": 7,
+              "validated": true
+            },
+            "run_native": {
+              "min_ms": 0.5347,
+              "median_ms": 0.5593,
+              "mean_ms": 0.5966,
+              "iqr_ms": 0.1221,
+              "max_ms": 0.7175,
+              "samples_ms": [
+                0.6589,
+                0.7175,
+                0.5421,
+                0.5593,
+                0.5347,
+                0.5368,
+                0.627
+              ],
+              "repeat": 7,
+              "validated": true
+            }
+          }
+        },
+        "stream": {
+          "total_ms": 0.6166,
+          "rust_native_ms": 0.5078,
+          "difference_ms": 0.1088,
+          "timings": {
+            "extract": {
+              "min_ms": 0.5667,
+              "median_ms": 0.6166,
+              "mean_ms": 0.6865,
+              "iqr_ms": 0.1289,
+              "max_ms": 0.989,
+              "samples_ms": [
+                0.6984,
+                0.6017,
+                0.6166,
+                0.989,
+                0.5667,
+                0.6028,
+                0.7306
+              ],
+              "repeat": 7,
+              "validated": true
+            },
+            "run_native": {
+              "min_ms": 0.4743,
+              "median_ms": 0.5078,
+              "mean_ms": 0.5238,
+              "iqr_ms": 0.0489,
+              "max_ms": 0.6418,
+              "samples_ms": [
+                0.511,
+                0.4892,
+                0.4743,
+                0.5041,
+                0.5381,
+                0.5078,
+                0.6418
+              ],
+              "repeat": 7,
+              "validated": true
+            }
+          }
+        }
+      }
+    },
+    {
+      "scenario": "01_catalog_scaling",
+      "label": "Catalog n=100, noise=True (61.0 KiB)",
+      "n_products": 100,
+      "noise": true,
+      "bytes": 62455,
+      "timings": {
+        "oxide_parse [scraper]": {
+          "min_ms": 3.2005,
+          "median_ms": 3.8076,
+          "mean_ms": 4.1941,
+          "iqr_ms": 1.3565,
+          "max_ms": 7.12,
+          "samples_ms": [
+            7.12,
+            3.8076,
+            3.2308,
+            3.2005,
+            3.2828,
+            4.1295,
+            4.5873
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "oxide_parse [lite]": {
+          "min_ms": 0.7221,
+          "median_ms": 0.8389,
+          "mean_ms": 0.8941,
+          "iqr_ms": 0.233,
+          "max_ms": 1.2605,
+          "samples_ms": [
+            0.9967,
+            0.7221,
+            0.7637,
+            1.2605,
+            0.8195,
+            0.8389,
+            0.8576
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "oxide_parse [stream]": {
+          "min_ms": 0.6911,
+          "median_ms": 0.7487,
+          "mean_ms": 0.7557,
+          "iqr_ms": 0.0613,
+          "max_ms": 0.8642,
+          "samples_ms": [
+            0.8642,
+            0.6911,
+            0.7194,
+            0.7646,
+            0.7807,
+            0.7212,
+            0.7487
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "selectolax [lexbor]": {
+          "min_ms": 3.2862,
+          "median_ms": 4.4558,
+          "mean_ms": 4.0706,
+          "iqr_ms": 1.2362,
+          "max_ms": 4.6025,
+          "samples_ms": [
+            4.4958,
+            4.4558,
+            3.2878,
+            3.8423,
+            4.6025,
+            4.524,
+            3.2862
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "frostwork": {
+          "min_ms": 1.1151,
+          "median_ms": 1.1475,
+          "mean_ms": 1.2052,
+          "iqr_ms": 0.1868,
+          "max_ms": 1.3921,
+          "samples_ms": [
+            1.1475,
+            1.309,
+            1.1247,
+            1.1222,
+            1.3921,
+            1.1151,
+            1.2258
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "lxml [direct]": {
+          "min_ms": 7.9545,
+          "median_ms": 9.4428,
+          "mean_ms": 9.3865,
+          "iqr_ms": 2.0491,
+          "max_ms": 10.641,
+          "samples_ms": [
+            10.641,
+            10.4894,
+            8.4403,
+            9.4428,
+            7.9545,
+            9.777,
+            8.9607
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "parsel": {
+          "min_ms": 16.3614,
+          "median_ms": 17.4459,
+          "mean_ms": 19.7538,
+          "iqr_ms": 8.7658,
+          "max_ms": 26.1454,
+          "samples_ms": [
+            25.7158,
+            26.1454,
+            16.95,
+            17.1794,
+            16.3614,
+            17.4459,
+            18.4787
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "scrapling": {
+          "min_ms": 22.2762,
+          "median_ms": 22.5673,
+          "mean_ms": 24.3651,
+          "iqr_ms": 3.978,
+          "max_ms": 30.9948,
+          "samples_ms": [
+            30.9948,
+            23.7715,
+            22.2762,
+            22.5673,
+            26.2995,
+            22.3215,
+            22.3247
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "bs4 + lxml": {
+          "min_ms": 73.8821,
+          "median_ms": 75.3364,
+          "mean_ms": 79.2392,
+          "iqr_ms": 12.9594,
+          "max_ms": 91.7734,
+          "samples_ms": [
+            87.4754,
+            76.484,
+            73.8821,
+            91.7734,
+            75.2074,
+            75.3364,
+            74.516
+          ],
+          "repeat": 7,
+          "validated": true
+        }
+      },
+      "native_breakdown": {
+        "scraper": {
+          "total_ms": 4.0193,
+          "rust_native_ms": 4.0901,
+          "difference_ms": -0.0708,
+          "timings": {
+            "extract": {
+              "min_ms": 3.1807,
+              "median_ms": 4.0193,
+              "mean_ms": 3.9209,
+              "iqr_ms": 1.2004,
+              "max_ms": 5.023,
+              "samples_ms": [
+                4.0193,
+                4.191,
+                5.023,
+                4.4273,
+                3.3778,
+                3.1807,
+                3.2269
+              ],
+              "repeat": 7,
+              "validated": true
+            },
+            "run_native": {
+              "min_ms": 3.0733,
+              "median_ms": 4.0901,
+              "mean_ms": 4.5556,
+              "iqr_ms": 2.2364,
+              "max_ms": 7.995,
+              "samples_ms": [
+                3.1487,
+                3.0733,
+                4.0901,
+                7.995,
+                3.546,
+                5.3851,
+                4.6513
+              ],
+              "repeat": 7,
+              "validated": true
+            }
+          }
+        },
+        "lite": {
+          "total_ms": 0.8434,
+          "rust_native_ms": 0.7698,
+          "difference_ms": 0.0736,
+          "timings": {
+            "extract": {
+              "min_ms": 0.6992,
+              "median_ms": 0.8434,
+              "mean_ms": 0.8181,
+              "iqr_ms": 0.1404,
+              "max_ms": 0.8838,
+              "samples_ms": [
+                0.8428,
+                0.8838,
+                0.8545,
+                0.6992,
+                0.8434,
+                0.7314,
+                0.8718
+              ],
+              "repeat": 7,
+              "validated": true
+            },
+            "run_native": {
+              "min_ms": 0.6859,
+              "median_ms": 0.7698,
+              "mean_ms": 0.7764,
+              "iqr_ms": 0.0751,
+              "max_ms": 0.9117,
+              "samples_ms": [
+                0.6859,
+                0.9117,
+                0.7698,
+                0.779,
+                0.7462,
+                0.7334,
+                0.8085
+              ],
+              "repeat": 7,
+              "validated": true
+            }
+          }
+        },
+        "stream": {
+          "total_ms": 0.7559,
+          "rust_native_ms": 0.7584,
+          "difference_ms": -0.0025,
+          "timings": {
+            "extract": {
+              "min_ms": 0.6769,
+              "median_ms": 0.7559,
+              "mean_ms": 0.8586,
+              "iqr_ms": 0.4353,
+              "max_ms": 1.1958,
+              "samples_ms": [
+                1.1288,
+                0.8285,
+                0.6769,
+                1.1958,
+                0.731,
+                0.7559,
+                0.6935
+              ],
+              "repeat": 7,
+              "validated": true
+            },
+            "run_native": {
+              "min_ms": 0.6567,
+              "median_ms": 0.7584,
+              "mean_ms": 0.7391,
+              "iqr_ms": 0.1205,
+              "max_ms": 0.799,
+              "samples_ms": [
+                0.799,
+                0.7782,
+                0.6567,
+                0.7698,
+                0.7536,
+                0.7584,
+                0.6577
+              ],
+              "repeat": 7,
+              "validated": true
+            }
+          }
+        }
+      }
+    },
+    {
+      "scenario": "01_catalog_scaling",
+      "label": "Catalog n=1000, noise=False (249.4 KiB)",
+      "n_products": 1000,
+      "noise": false,
+      "bytes": 255385,
+      "timings": {
+        "oxide_parse [scraper]": {
+          "min_ms": 14.5808,
+          "median_ms": 17.2743,
+          "mean_ms": 20.597,
+          "iqr_ms": 12.9592,
+          "max_ms": 35.6299,
+          "samples_ms": [
+            14.5808,
+            17.2743,
+            14.9892,
+            15.6135,
+            27.9484,
+            35.6299,
+            18.1427
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "oxide_parse [lite]": {
+          "min_ms": 4.7316,
+          "median_ms": 6.2768,
+          "mean_ms": 7.5028,
+          "iqr_ms": 5.5238,
+          "max_ms": 13.482,
+          "samples_ms": [
+            5.1715,
+            7.7558,
+            4.7891,
+            4.7316,
+            6.2768,
+            13.482,
+            10.3129
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "oxide_parse [stream]": {
+          "min_ms": 4.0722,
+          "median_ms": 4.8709,
+          "mean_ms": 4.9421,
+          "iqr_ms": 1.2326,
+          "max_ms": 6.4785,
+          "samples_ms": [
+            4.1916,
+            5.2066,
+            4.0722,
+            4.3508,
+            5.4242,
+            6.4785,
+            4.8709
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "selectolax [lexbor]": {
+          "min_ms": 25.5663,
+          "median_ms": 27.2435,
+          "mean_ms": 31.7153,
+          "iqr_ms": 13.3235,
+          "max_ms": 43.3691,
+          "samples_ms": [
+            27.2435,
+            25.5935,
+            25.5663,
+            26.6677,
+            34.6498,
+            43.3691,
+            38.917
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "frostwork": {
+          "min_ms": 6.1558,
+          "median_ms": 8.1436,
+          "mean_ms": 8.4002,
+          "iqr_ms": 3.4176,
+          "max_ms": 10.996,
+          "samples_ms": [
+            6.1558,
+            6.6816,
+            8.1436,
+            6.9309,
+            10.996,
+            10.0992,
+            9.7943
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "lxml [direct]": {
+          "min_ms": 52.5659,
+          "median_ms": 70.6116,
+          "mean_ms": 67.4716,
+          "iqr_ms": 24.8634,
+          "max_ms": 82.4539,
+          "samples_ms": [
+            52.5659,
+            71.0378,
+            56.9015,
+            56.9655,
+            82.4539,
+            70.6116,
+            81.7649
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "parsel": {
+          "min_ms": 126.5922,
+          "median_ms": 143.0933,
+          "mean_ms": 179.105,
+          "iqr_ms": 84.5942,
+          "max_ms": 357.187,
+          "samples_ms": [
+            143.0933,
+            133.0666,
+            126.5922,
+            132.7311,
+            143.7395,
+            357.187,
+            217.3253
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "scrapling": {
+          "min_ms": 183.0386,
+          "median_ms": 195.6108,
+          "mean_ms": 222.8667,
+          "iqr_ms": 79.6692,
+          "max_ms": 319.4108,
+          "samples_ms": [
+            195.6108,
+            183.0386,
+            263.554,
+            186.0562,
+            183.8848,
+            319.4108,
+            228.5119
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "bs4 + lxml": {
+          "min_ms": 333.9344,
+          "median_ms": 407.1654,
+          "mean_ms": 458.6647,
+          "iqr_ms": 216.5768,
+          "max_ms": 757.5991,
+          "samples_ms": [
+            333.9344,
+            354.8753,
+            421.5061,
+            364.1202,
+            407.1654,
+            757.5991,
+            571.4521
+          ],
+          "repeat": 7,
+          "validated": true
+        }
+      },
+      "native_breakdown": {
+        "scraper": {
+          "total_ms": 14.9732,
+          "rust_native_ms": 13.664,
+          "difference_ms": 1.3092,
+          "timings": {
+            "extract": {
+              "min_ms": 14.4849,
+              "median_ms": 14.9732,
+              "mean_ms": 15.4087,
+              "iqr_ms": 1.947,
+              "max_ms": 17.0434,
+              "samples_ms": [
+                14.4849,
+                17.0434,
+                14.6384,
+                14.9732,
+                15.4674,
+                16.5854,
+                14.6681
+              ],
+              "repeat": 7,
+              "validated": true
+            },
+            "run_native": {
+              "min_ms": 12.63,
+              "median_ms": 13.664,
+              "mean_ms": 13.6466,
+              "iqr_ms": 0.6502,
+              "max_ms": 14.7546,
+              "samples_ms": [
+                13.843,
+                13.664,
+                12.63,
+                13.8649,
+                14.7546,
+                13.5552,
+                13.2147
+              ],
+              "repeat": 7,
+              "validated": true
+            }
+          }
+        },
+        "lite": {
+          "total_ms": 4.5351,
+          "rust_native_ms": 4.1135,
+          "difference_ms": 0.4216,
+          "timings": {
+            "extract": {
+              "min_ms": 4.1699,
+              "median_ms": 4.5351,
+              "mean_ms": 4.8736,
+              "iqr_ms": 1.3811,
+              "max_ms": 5.7485,
+              "samples_ms": [
+                5.5991,
+                4.218,
+                5.4176,
+                4.4272,
+                4.5351,
+                4.1699,
+                5.7485
+              ],
+              "repeat": 7,
+              "validated": true
+            },
+            "run_native": {
+              "min_ms": 3.7713,
+              "median_ms": 4.1135,
+              "mean_ms": 4.2078,
+              "iqr_ms": 0.7117,
+              "max_ms": 4.6546,
+              "samples_ms": [
+                4.6546,
+                4.3167,
+                4.1135,
+                3.9194,
+                4.6311,
+                4.0479,
+                3.7713
+              ],
+              "repeat": 7,
+              "validated": true
+            }
+          }
+        },
+        "stream": {
+          "total_ms": 5.1986,
+          "rust_native_ms": 3.9748,
+          "difference_ms": 1.2238,
+          "timings": {
+            "extract": {
+              "min_ms": 4.0889,
+              "median_ms": 5.1986,
+              "mean_ms": 5.7552,
+              "iqr_ms": 1.9022,
+              "max_ms": 9.8578,
+              "samples_ms": [
+                9.8578,
+                4.0889,
+                5.1986,
+                4.4945,
+                5.5916,
+                4.6583,
+                6.3967
+              ],
+              "repeat": 7,
+              "validated": true
+            },
+            "run_native": {
+              "min_ms": 3.6947,
+              "median_ms": 3.9748,
+              "mean_ms": 4.1563,
+              "iqr_ms": 0.6737,
+              "max_ms": 4.8374,
+              "samples_ms": [
+                3.6947,
+                3.9512,
+                4.6244,
+                3.9507,
+                4.8374,
+                4.0612,
+                3.9748
+              ],
+              "repeat": 7,
+              "validated": true
+            }
+          }
+        }
+      }
+    },
+    {
+      "scenario": "01_catalog_scaling",
+      "label": "Catalog n=1000, noise=True (613.7 KiB)",
+      "n_products": 1000,
+      "noise": true,
+      "bytes": 628385,
+      "timings": {
+        "oxide_parse [scraper]": {
+          "min_ms": 35.523,
+          "median_ms": 40.0105,
+          "mean_ms": 40.7543,
+          "iqr_ms": 8.6494,
+          "max_ms": 52.8764,
+          "samples_ms": [
+            41.2196,
+            35.7448,
+            40.0105,
+            35.523,
+            35.6281,
+            44.2775,
+            52.8764
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "oxide_parse [lite]": {
+          "min_ms": 7.9618,
+          "median_ms": 8.7532,
+          "mean_ms": 8.7327,
+          "iqr_ms": 0.3275,
+          "max_ms": 9.3213,
+          "samples_ms": [
+            8.8735,
+            8.5953,
+            8.9228,
+            8.7008,
+            7.9618,
+            8.7532,
+            9.3213
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "oxide_parse [stream]": {
+          "min_ms": 6.7466,
+          "median_ms": 7.4371,
+          "mean_ms": 7.6131,
+          "iqr_ms": 1.6247,
+          "max_ms": 8.8404,
+          "samples_ms": [
+            6.7907,
+            7.0889,
+            6.7466,
+            8.8404,
+            7.9729,
+            7.4371,
+            8.4154
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "selectolax [lexbor]": {
+          "min_ms": 33.7413,
+          "median_ms": 37.8059,
+          "mean_ms": 37.7813,
+          "iqr_ms": 2.7554,
+          "max_ms": 42.9992,
+          "samples_ms": [
+            38.0606,
+            42.9992,
+            38.6459,
+            37.3258,
+            37.8059,
+            33.7413,
+            35.8905
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "frostwork": {
+          "min_ms": 10.3897,
+          "median_ms": 11.4418,
+          "mean_ms": 11.7588,
+          "iqr_ms": 2.7367,
+          "max_ms": 13.494,
+          "samples_ms": [
+            10.9649,
+            11.4418,
+            10.3897,
+            11.9871,
+            13.3855,
+            10.6488,
+            13.494
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "lxml [direct]": {
+          "min_ms": 86.1869,
+          "median_ms": 91.3314,
+          "mean_ms": 97.7144,
+          "iqr_ms": 28.677,
+          "max_ms": 118.801,
+          "samples_ms": [
+            91.3314,
+            94.0445,
+            89.7562,
+            116.279,
+            87.602,
+            86.1869,
+            118.801
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "parsel": {
+          "min_ms": 171.8054,
+          "median_ms": 184.8759,
+          "mean_ms": 184.1815,
+          "iqr_ms": 15.1882,
+          "max_ms": 193.9017,
+          "samples_ms": [
+            191.577,
+            171.8054,
+            183.5093,
+            176.3888,
+            187.2126,
+            184.8759,
+            193.9017
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "scrapling": {
+          "min_ms": 228.1812,
+          "median_ms": 248.4473,
+          "mean_ms": 251.0169,
+          "iqr_ms": 31.2887,
+          "max_ms": 286.4603,
+          "samples_ms": [
+            248.4473,
+            243.2426,
+            228.1812,
+            231.2297,
+            257.0389,
+            262.5184,
+            286.4603
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "bs4 + lxml": {
+          "min_ms": 793.6271,
+          "median_ms": 824.6404,
+          "mean_ms": 848.0364,
+          "iqr_ms": 68.4678,
+          "max_ms": 979.7165,
+          "samples_ms": [
+            804.0437,
+            844.2754,
+            817.44,
+            793.6271,
+            872.5115,
+            824.6404,
+            979.7165
+          ],
+          "repeat": 7,
+          "validated": true
+        }
+      },
+      "native_breakdown": {
+        "scraper": {
+          "total_ms": 36.9158,
+          "rust_native_ms": 35.8888,
+          "difference_ms": 1.027,
+          "timings": {
+            "extract": {
+              "min_ms": 35.5906,
+              "median_ms": 36.9158,
+              "mean_ms": 39.8509,
+              "iqr_ms": 6.3423,
+              "max_ms": 50.5742,
+              "samples_ms": [
+                40.6902,
+                36.9158,
+                42.3571,
+                36.0148,
+                35.5906,
+                36.8133,
+                50.5742
+              ],
+              "repeat": 7,
+              "validated": true
+            },
+            "run_native": {
+              "min_ms": 33.9209,
+              "median_ms": 35.8888,
+              "mean_ms": 36.6941,
+              "iqr_ms": 1.0442,
+              "max_ms": 43.9505,
+              "samples_ms": [
+                35.1457,
+                35.8888,
+                35.8211,
+                33.9209,
+                35.9421,
+                36.1899,
+                43.9505
+              ],
+              "repeat": 7,
+              "validated": true
+            }
+          }
+        },
+        "lite": {
+          "total_ms": 8.25,
+          "rust_native_ms": 7.6399,
+          "difference_ms": 0.6101,
+          "timings": {
+            "extract": {
+              "min_ms": 7.0747,
+              "median_ms": 8.25,
+              "mean_ms": 8.1796,
+              "iqr_ms": 2.072,
+              "max_ms": 9.8466,
+              "samples_ms": [
+                9.8466,
+                8.5767,
+                8.25,
+                9.1726,
+                7.1006,
+                7.2363,
+                7.0747
+              ],
+              "repeat": 7,
+              "validated": true
+            },
+            "run_native": {
+              "min_ms": 6.7597,
+              "median_ms": 7.6399,
+              "mean_ms": 7.851,
+              "iqr_ms": 1.7101,
+              "max_ms": 8.9878,
+              "samples_ms": [
+                8.8365,
+                8.9878,
+                8.3291,
+                7.2774,
+                7.1264,
+                6.7597,
+                7.6399
+              ],
+              "repeat": 7,
+              "validated": true
+            }
+          }
+        },
+        "stream": {
+          "total_ms": 6.2295,
+          "rust_native_ms": 5.6742,
+          "difference_ms": 0.5553,
+          "timings": {
+            "extract": {
+              "min_ms": 5.9708,
+              "median_ms": 6.2295,
+              "mean_ms": 6.479,
+              "iqr_ms": 1.327,
+              "max_ms": 7.4748,
+              "samples_ms": [
+                6.1167,
+                5.981,
+                6.2295,
+                5.9708,
+                6.2719,
+                7.4748,
+                7.308
+              ],
+              "repeat": 7,
+              "validated": true
+            },
+            "run_native": {
+              "min_ms": 5.4805,
+              "median_ms": 5.6742,
+              "mean_ms": 6.0273,
+              "iqr_ms": 0.795,
+              "max_ms": 7.1498,
+              "samples_ms": [
+                5.6403,
+                6.1534,
+                5.6576,
+                5.4805,
+                7.1498,
+                6.4353,
+                5.6742
+              ],
+              "repeat": 7,
+              "validated": true
+            }
+          }
+        }
+      }
+    },
+    {
+      "scenario": "01_catalog_scaling",
+      "label": "Catalog n=10000, noise=False (2532.0 KiB)",
+      "n_products": 10000,
+      "noise": false,
+      "bytes": 2592805,
+      "timings": {
+        "oxide_parse [scraper]": {
+          "min_ms": 147.246,
+          "median_ms": 151.0842,
+          "mean_ms": 154.039,
+          "iqr_ms": 12.5375,
+          "max_ms": 167.0272,
+          "samples_ms": [
+            157.2585,
+            148.6218,
+            151.0842,
+            147.246,
+            167.0272,
+            159.7863,
+            147.2488
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "oxide_parse [lite]": {
+          "min_ms": 49.3809,
+          "median_ms": 50.2223,
+          "mean_ms": 53.0921,
+          "iqr_ms": 7.8037,
+          "max_ms": 61.091,
+          "samples_ms": [
+            49.5023,
+            57.306,
+            61.091,
+            54.3328,
+            50.2223,
+            49.8095,
+            49.3809
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "oxide_parse [stream]": {
+          "min_ms": 40.5353,
+          "median_ms": 42.1301,
+          "mean_ms": 44.3998,
+          "iqr_ms": 6.3548,
+          "max_ms": 49.0935,
+          "samples_ms": [
+            47.8027,
+            41.4479,
+            47.7858,
+            42.1301,
+            42.0032,
+            40.5353,
+            49.0935
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "selectolax [lexbor]": {
+          "min_ms": 278.9505,
+          "median_ms": 294.6922,
+          "mean_ms": 305.46,
+          "iqr_ms": 47.262,
+          "max_ms": 365.2927,
+          "samples_ms": [
+            365.2927,
+            278.9505,
+            294.6922,
+            299.9037,
+            280.8471,
+            328.1091,
+            290.4246
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "frostwork": {
+          "min_ms": 74.5016,
+          "median_ms": 78.005,
+          "mean_ms": 79.5051,
+          "iqr_ms": 7.1131,
+          "max_ms": 85.711,
+          "samples_ms": [
+            76.6553,
+            78.005,
+            83.4487,
+            85.711,
+            76.3356,
+            81.8786,
+            74.5016
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "lxml [direct]": {
+          "min_ms": 556.1771,
+          "median_ms": 562.4379,
+          "mean_ms": 569.4343,
+          "iqr_ms": 24.552,
+          "max_ms": 600.4211,
+          "samples_ms": [
+            558.3081,
+            556.1771,
+            581.0544,
+            562.4379,
+            571.1388,
+            600.4211,
+            556.5024
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "parsel": {
+          "min_ms": 1306.381,
+          "median_ms": 1396.7938,
+          "mean_ms": 1455.4209,
+          "iqr_ms": 238.522,
+          "max_ms": 1692.1412,
+          "samples_ms": [
+            1347.8178,
+            1392.2151,
+            1396.7938,
+            1306.381,
+            1692.1412,
+            1466.2574,
+            1586.3398
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "scrapling": {
+          "min_ms": 1956.7943,
+          "median_ms": 2021.5614,
+          "mean_ms": 2053.7202,
+          "iqr_ms": 145.546,
+          "max_ms": 2253.4985,
+          "samples_ms": [
+            2108.8846,
+            2070.1686,
+            2001.7953,
+            2021.5614,
+            2253.4985,
+            1963.3386,
+            1956.7943
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "bs4 + lxml": {
+          "min_ms": 3555.2583,
+          "median_ms": 3651.894,
+          "mean_ms": 3707.477,
+          "iqr_ms": 233.5588,
+          "max_ms": 3967.054,
+          "samples_ms": [
+            3610.7333,
+            3967.054,
+            3555.2583,
+            3651.894,
+            3844.2921,
+            3703.6318,
+            3619.4755
+          ],
+          "repeat": 7,
+          "validated": true
+        }
+      },
+      "native_breakdown": {
+        "scraper": {
+          "total_ms": 154.417,
+          "rust_native_ms": 149.6503,
+          "difference_ms": 4.7667,
+          "timings": {
+            "extract": {
+              "min_ms": 142.9417,
+              "median_ms": 154.417,
+              "mean_ms": 158.4595,
+              "iqr_ms": 27.4957,
+              "max_ms": 174.5666,
+              "samples_ms": [
+                168.9477,
+                173.2555,
+                174.5666,
+                149.3283,
+                145.7598,
+                154.417,
+                142.9417
+              ],
+              "repeat": 7,
+              "validated": true
+            },
+            "run_native": {
+              "min_ms": 140.0859,
+              "median_ms": 149.6503,
+              "mean_ms": 150.9212,
+              "iqr_ms": 10.0461,
+              "max_ms": 162.3122,
+              "samples_ms": [
+                162.3122,
+                153.0459,
+                146.9253,
+                147.4572,
+                149.6503,
+                156.9714,
+                140.0859
+              ],
+              "repeat": 7,
+              "validated": true
+            }
+          }
+        },
+        "lite": {
+          "total_ms": 48.5101,
+          "rust_native_ms": 44.8451,
+          "difference_ms": 3.665,
+          "timings": {
+            "extract": {
+              "min_ms": 46.4173,
+              "median_ms": 48.5101,
+              "mean_ms": 49.0416,
+              "iqr_ms": 1.562,
+              "max_ms": 53.3519,
+              "samples_ms": [
+                48.9619,
+                49.6872,
+                48.2377,
+                53.3519,
+                48.5101,
+                46.4173,
+                48.1252
+              ],
+              "repeat": 7,
+              "validated": true
+            },
+            "run_native": {
+              "min_ms": 42.8012,
+              "median_ms": 44.8451,
+              "mean_ms": 45.1006,
+              "iqr_ms": 0.9575,
+              "max_ms": 48.3137,
+              "samples_ms": [
+                45.4571,
+                48.3137,
+                44.4996,
+                44.5491,
+                44.8451,
+                45.2386,
+                42.8012
+              ],
+              "repeat": 7,
+              "validated": true
+            }
+          }
+        },
+        "stream": {
+          "total_ms": 51.374,
+          "rust_native_ms": 44.1105,
+          "difference_ms": 7.2635,
+          "timings": {
+            "extract": {
+              "min_ms": 44.8461,
+              "median_ms": 51.374,
+              "mean_ms": 50.9801,
+              "iqr_ms": 9.3523,
+              "max_ms": 56.9832,
+              "samples_ms": [
+                46.6119,
+                55.1973,
+                55.6001,
+                56.9832,
+                51.374,
+                44.8461,
+                46.2478
+              ],
+              "repeat": 7,
+              "validated": true
+            },
+            "run_native": {
+              "min_ms": 36.4297,
+              "median_ms": 44.1105,
+              "mean_ms": 43.0303,
+              "iqr_ms": 8.9804,
+              "max_ms": 49.9026,
+              "samples_ms": [
+                41.6698,
+                44.1105,
+                49.9026,
+                45.6051,
+                46.2373,
+                37.2569,
+                36.4297
+              ],
+              "repeat": 7,
+              "validated": true
+            }
+          }
+        }
+      }
+    },
+    {
+      "scenario": "01_catalog_scaling",
+      "label": "Catalog n=10000, noise=True (6174.6 KiB)",
+      "n_products": 10000,
+      "noise": true,
+      "bytes": 6322805,
+      "timings": {
+        "oxide_parse [scraper]": {
+          "min_ms": 359.5198,
+          "median_ms": 376.3258,
+          "mean_ms": 388.0538,
+          "iqr_ms": 23.2091,
+          "max_ms": 476.797,
+          "samples_ms": [
+            362.7583,
+            376.3258,
+            382.4369,
+            385.9674,
+            372.5713,
+            476.797,
+            359.5198
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "oxide_parse [lite]": {
+          "min_ms": 80.4915,
+          "median_ms": 91.444,
+          "mean_ms": 96.5383,
+          "iqr_ms": 17.9408,
+          "max_ms": 129.888,
+          "samples_ms": [
+            90.3228,
+            99.1744,
+            91.444,
+            101.1942,
+            83.2534,
+            129.888,
+            80.4915
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "oxide_parse [stream]": {
+          "min_ms": 68.9395,
+          "median_ms": 74.462,
+          "mean_ms": 77.7599,
+          "iqr_ms": 13.8471,
+          "max_ms": 94.1714,
+          "samples_ms": [
+            94.1714,
+            78.1906,
+            74.462,
+            73.0635,
+            68.9395,
+            70.8227,
+            84.6698
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "selectolax [lexbor]": {
+          "min_ms": 429.8717,
+          "median_ms": 447.2628,
+          "mean_ms": 471.9765,
+          "iqr_ms": 57.8858,
+          "max_ms": 583.9225,
+          "samples_ms": [
+            447.2628,
+            443.8999,
+            491.3311,
+            583.9225,
+            474.1023,
+            429.8717,
+            433.4453
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "frostwork": {
+          "min_ms": 127.364,
+          "median_ms": 143.3192,
+          "mean_ms": 150.113,
+          "iqr_ms": 43.425,
+          "max_ms": 181.9705,
+          "samples_ms": [
+            157.6384,
+            133.1411,
+            143.3192,
+            127.364,
+            131.9665,
+            181.9705,
+            175.3915
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "lxml [direct]": {
+          "min_ms": 941.0321,
+          "median_ms": 1001.1402,
+          "mean_ms": 1037.6593,
+          "iqr_ms": 144.6041,
+          "max_ms": 1168.4572,
+          "samples_ms": [
+            964.425,
+            1109.0291,
+            992.5828,
+            1001.1402,
+            1086.9489,
+            1168.4572,
+            941.0321
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "parsel": {
+          "min_ms": 1767.4584,
+          "median_ms": 1872.3415,
+          "mean_ms": 1892.0135,
+          "iqr_ms": 157.8716,
+          "max_ms": 2064.6744,
+          "samples_ms": [
+            1928.7529,
+            2064.6744,
+            1767.4584,
+            1956.3584,
+            1798.4868,
+            1872.3415,
+            1856.022
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "scrapling": {
+          "min_ms": 2384.7714,
+          "median_ms": 2481.6551,
+          "mean_ms": 2671.565,
+          "iqr_ms": 536.6451,
+          "max_ms": 3512.6667,
+          "samples_ms": [
+            2447.0156,
+            2953.1683,
+            2481.6551,
+            2416.5232,
+            3512.6667,
+            2505.155,
+            2384.7714
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "bs4 + lxml": {
+          "min_ms": 8607.5593,
+          "median_ms": 8869.2783,
+          "mean_ms": 8984.6137,
+          "iqr_ms": 623.7303,
+          "max_ms": 9885.0044,
+          "samples_ms": [
+            8656.4172,
+            8892.4096,
+            8869.2783,
+            9280.1475,
+            8607.5593,
+            9885.0044,
+            8701.4796
+          ],
+          "repeat": 7,
+          "validated": true
+        }
+      },
+      "native_breakdown": {
+        "scraper": {
+          "total_ms": 414.9072,
+          "rust_native_ms": 377.9691,
+          "difference_ms": 36.9381,
+          "timings": {
+            "extract": {
+              "min_ms": 356.8016,
+              "median_ms": 414.9072,
+              "mean_ms": 407.217,
+              "iqr_ms": 70.102,
+              "max_ms": 491.6716,
+              "samples_ms": [
+                491.6716,
+                374.3703,
+                421.234,
+                430.818,
+                414.9072,
+                360.716,
+                356.8016
+              ],
+              "repeat": 7,
+              "validated": true
+            },
+            "run_native": {
+              "min_ms": 357.6016,
+              "median_ms": 377.9691,
+              "mean_ms": 395.6096,
+              "iqr_ms": 32.3237,
+              "max_ms": 508.178,
+              "samples_ms": [
+                508.178,
+                357.6016,
+                401.2649,
+                381.7496,
+                368.9412,
+                377.9691,
+                373.5631
+              ],
+              "repeat": 7,
+              "validated": true
+            }
+          }
+        },
+        "lite": {
+          "total_ms": 86.1095,
+          "rust_native_ms": 82.299,
+          "difference_ms": 3.8105,
+          "timings": {
+            "extract": {
+              "min_ms": 80.883,
+              "median_ms": 86.1095,
+              "mean_ms": 89.0144,
+              "iqr_ms": 17.3131,
+              "max_ms": 100.136,
+              "samples_ms": [
+                80.883,
+                84.9055,
+                86.1095,
+                100.136,
+                89.4474,
+                99.4662,
+                82.1531
+              ],
+              "repeat": 7,
+              "validated": true
+            },
+            "run_native": {
+              "min_ms": 75.341,
+              "median_ms": 82.299,
+              "mean_ms": 83.7228,
+              "iqr_ms": 9.5948,
+              "max_ms": 104.2371,
+              "samples_ms": [
+                76.2249,
+                75.341,
+                104.2371,
+                85.8197,
+                79.684,
+                82.299,
+                82.4542
+              ],
+              "repeat": 7,
+              "validated": true
+            }
+          }
+        },
+        "stream": {
+          "total_ms": 74.8651,
+          "rust_native_ms": 63.0631,
+          "difference_ms": 11.802,
+          "timings": {
+            "extract": {
+              "min_ms": 69.7628,
+              "median_ms": 74.8651,
+              "mean_ms": 77.1358,
+              "iqr_ms": 12.069,
+              "max_ms": 90.6386,
+              "samples_ms": [
+                75.8665,
+                74.8651,
+                83.0555,
+                69.7628,
+                70.9865,
+                90.6386,
+                74.7759
+              ],
+              "repeat": 7,
+              "validated": true
+            },
+            "run_native": {
+              "min_ms": 61.2123,
+              "median_ms": 63.0631,
+              "mean_ms": 66.0669,
+              "iqr_ms": 11.4249,
+              "max_ms": 76.5563,
+              "samples_ms": [
+                61.2123,
+                62.5183,
+                73.4389,
+                63.6651,
+                63.0631,
+                76.5563,
+                62.014
+              ],
+              "repeat": 7,
+              "validated": true
+            }
+          }
+        }
+      }
+    },
+    {
+      "scenario": "02_early_exit_head",
+      "label": "Early-Exit Head + 1st Offer on 1591 KiB page",
+      "bytes": 1629169,
+      "timings": {
+        "oxide_parse [scraper]": {
+          "min_ms": 44.6823,
+          "median_ms": 49.7711,
+          "mean_ms": 53.4327,
+          "iqr_ms": 18.6406,
+          "max_ms": 65.5069,
+          "samples_ms": [
+            65.5069,
+            45.2075,
+            57.9364,
+            49.7711,
+            47.0768,
+            44.6823,
+            63.8481
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "oxide_parse [lite]": {
+          "min_ms": 8.2739,
+          "median_ms": 9.2023,
+          "mean_ms": 9.427,
+          "iqr_ms": 1.5927,
+          "max_ms": 10.7567,
+          "samples_ms": [
+            10.7567,
+            10.2094,
+            8.6167,
+            9.7666,
+            9.1631,
+            9.2023,
+            8.2739
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "oxide_parse [stream]": {
+          "min_ms": 2.1326,
+          "median_ms": 2.3971,
+          "mean_ms": 2.3971,
+          "iqr_ms": 0.4562,
+          "max_ms": 2.6506,
+          "samples_ms": [
+            2.6466,
+            2.2875,
+            2.6506,
+            2.1904,
+            2.1326,
+            2.4751,
+            2.3971
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "selectolax [lexbor]": {
+          "min_ms": 12.7698,
+          "median_ms": 14.6938,
+          "mean_ms": 16.5119,
+          "iqr_ms": 8.3396,
+          "max_ms": 22.8115,
+          "samples_ms": [
+            22.8115,
+            22.3782,
+            14.6938,
+            14.0386,
+            14.0795,
+            12.7698,
+            14.812
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "lxml [direct]": {
+          "min_ms": 134.2994,
+          "median_ms": 138.1854,
+          "mean_ms": 156.2197,
+          "iqr_ms": 56.8319,
+          "max_ms": 211.308,
+          "samples_ms": [
+            211.308,
+            192.0061,
+            138.0908,
+            135.1742,
+            144.4741,
+            138.1854,
+            134.2994
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "parsel": {
+          "min_ms": 147.3311,
+          "median_ms": 158.5183,
+          "mean_ms": 161.7882,
+          "iqr_ms": 12.3504,
+          "max_ms": 201.9411,
+          "samples_ms": [
+            201.9411,
+            159.2904,
+            163.3027,
+            150.9523,
+            158.5183,
+            151.1817,
+            147.3311
+          ],
+          "repeat": 7,
+          "validated": true
+        }
+      }
+    },
+    {
+      "scenario": "03_deep_css_combinators",
+      "label": "Deep DOM (depth=25, 400 blocks, :not/:nth-child/[attr^=]) (149.1 KiB)",
+      "bytes": 152721,
+      "timings": {
+        "oxide_parse [scraper]": {
+          "min_ms": 8.1277,
+          "median_ms": 11.2914,
+          "mean_ms": 10.749,
+          "iqr_ms": 2.2392,
+          "max_ms": 12.2878,
+          "samples_ms": [
+            12.2878,
+            8.1277,
+            11.7563,
+            11.2914,
+            10.2923,
+            9.6242,
+            11.8634
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "oxide_parse [lite]": {
+          "min_ms": 2.1079,
+          "median_ms": 2.2413,
+          "mean_ms": 2.3082,
+          "iqr_ms": 0.3534,
+          "max_ms": 2.6704,
+          "samples_ms": [
+            2.1079,
+            2.128,
+            2.3011,
+            2.6704,
+            2.4814,
+            2.227,
+            2.2413
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "oxide_parse [stream]": {
+          "min_ms": 2.3033,
+          "median_ms": 2.4386,
+          "mean_ms": 2.5195,
+          "iqr_ms": 0.1759,
+          "max_ms": 3.1613,
+          "samples_ms": [
+            2.5071,
+            2.5043,
+            3.1613,
+            2.4386,
+            2.3033,
+            2.3904,
+            2.3312
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "selectolax [lexbor]": {
+          "min_ms": 2.9563,
+          "median_ms": 3.7078,
+          "mean_ms": 3.8597,
+          "iqr_ms": 1.3503,
+          "max_ms": 5.0331,
+          "samples_ms": [
+            3.3685,
+            2.9563,
+            4.7188,
+            3.758,
+            3.7078,
+            5.0331,
+            3.4756
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "parsel": {
+          "min_ms": 31.9213,
+          "median_ms": 36.0598,
+          "mean_ms": 36.6159,
+          "iqr_ms": 3.3629,
+          "max_ms": 43.5189,
+          "samples_ms": [
+            35.2287,
+            31.9213,
+            37.4576,
+            43.5189,
+            34.381,
+            36.0598,
+            37.7439
+          ],
+          "repeat": 7,
+          "validated": true
+        }
+      }
+    },
+    {
+      "scenario": "04_xpath_torture",
+      "label": "XPath 1.0 (contains, following-sibling, parent, count on 600 rows) (123.6 KiB)",
+      "bytes": 126588,
+      "timings": {
+        "oxide_parse [lite]": {
+          "min_ms": 6.0226,
+          "median_ms": 6.0798,
+          "mean_ms": 6.174,
+          "iqr_ms": 0.3122,
+          "max_ms": 6.5563,
+          "samples_ms": [
+            6.0226,
+            6.0424,
+            6.1536,
+            6.3377,
+            6.5563,
+            6.0798,
+            6.0255
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "oxide_parse [scraper]": {
+          "min_ms": 10.9553,
+          "median_ms": 13.3955,
+          "mean_ms": 13.4046,
+          "iqr_ms": 1.3368,
+          "max_ms": 16.0116,
+          "samples_ms": [
+            16.0116,
+            10.9553,
+            14.1625,
+            13.4799,
+            13.3955,
+            13.0015,
+            12.8257
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "lxml [xpath]": {
+          "min_ms": 9.7795,
+          "median_ms": 14.3043,
+          "mean_ms": 14.1445,
+          "iqr_ms": 4.5323,
+          "max_ms": 17.5417,
+          "samples_ms": [
+            17.5417,
+            9.7795,
+            14.404,
+            14.3043,
+            13.0292,
+            17.2425,
+            12.7102
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "parsel [xpath]": {
+          "min_ms": 13.3876,
+          "median_ms": 17.9877,
+          "mean_ms": 17.8251,
+          "iqr_ms": 2.823,
+          "max_ms": 20.8728,
+          "samples_ms": [
+            17.0997,
+            17.221,
+            13.3876,
+            19.9227,
+            20.8728,
+            17.9877,
+            18.284
+          ],
+          "repeat": 7,
+          "validated": true
+        }
+      }
+    },
+    {
+      "scenario": "05_hybrid_html_json",
+      "label": "Hybrid HTML + __NEXT_DATA__ JSON (1000 items, 124.9 KiB)",
+      "bytes": 127913,
+      "timings": {
+        "oxide_parse [scraper]": {
+          "min_ms": 4.7471,
+          "median_ms": 5.6663,
+          "mean_ms": 6.2439,
+          "iqr_ms": 2.5578,
+          "max_ms": 8.0575,
+          "samples_ms": [
+            5.6663,
+            5.6354,
+            4.7471,
+            5.4484,
+            8.0575,
+            8.0062,
+            6.1461
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "oxide_parse [lite]": {
+          "min_ms": 3.9672,
+          "median_ms": 5.7526,
+          "mean_ms": 5.6824,
+          "iqr_ms": 2.195,
+          "max_ms": 7.1832,
+          "samples_ms": [
+            7.1832,
+            5.7526,
+            6.3073,
+            4.5387,
+            5.2939,
+            3.9672,
+            6.7337
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "oxide_parse [stream]": {
+          "min_ms": 4.8934,
+          "median_ms": 6.4704,
+          "mean_ms": 6.1839,
+          "iqr_ms": 1.545,
+          "max_ms": 7.1184,
+          "samples_ms": [
+            6.5635,
+            4.8934,
+            7.1184,
+            6.4704,
+            5.1949,
+            6.7399,
+            6.3067
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "selectolax + json.loads": {
+          "min_ms": 1.9316,
+          "median_ms": 2.242,
+          "mean_ms": 3.284,
+          "iqr_ms": 3.0111,
+          "max_ms": 6.2315,
+          "samples_ms": [
+            4.9959,
+            3.3981,
+            2.2043,
+            1.9848,
+            2.242,
+            6.2315,
+            1.9316
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "lxml + json.loads": {
+          "min_ms": 4.8099,
+          "median_ms": 4.9456,
+          "mean_ms": 5.0971,
+          "iqr_ms": 0.3723,
+          "max_ms": 5.8584,
+          "samples_ms": [
+            5.8584,
+            5.2614,
+            4.9107,
+            4.9456,
+            4.8099,
+            4.8891,
+            5.0049
+          ],
+          "repeat": 7,
+          "validated": true
+        }
+      }
+    },
+    {
+      "scenario": "06_text_and_entities",
+      "label": "Dirty Text + Entities + Subtree Exclusion (600 blocks, 207.6 KiB)",
+      "bytes": 212533,
+      "timings": {
+        "oxide_parse [scraper]": {
+          "min_ms": 8.3489,
+          "median_ms": 11.5132,
+          "mean_ms": 11.0089,
+          "iqr_ms": 1.6481,
+          "max_ms": 12.1375,
+          "samples_ms": [
+            12.0486,
+            12.1375,
+            10.5944,
+            11.5132,
+            10.4005,
+            12.0195,
+            8.3489
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "oxide_parse [lite]": {
+          "min_ms": 1.9645,
+          "median_ms": 2.5842,
+          "mean_ms": 2.667,
+          "iqr_ms": 0.8169,
+          "max_ms": 3.556,
+          "samples_ms": [
+            1.9645,
+            2.6954,
+            2.454,
+            3.116,
+            3.556,
+            2.5842,
+            2.2991
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "selectolax [strip_tags]": {
+          "min_ms": 2.9098,
+          "median_ms": 3.3256,
+          "mean_ms": 3.4082,
+          "iqr_ms": 0.7297,
+          "max_ms": 4.2103,
+          "samples_ms": [
+            3.3562,
+            3.8209,
+            2.9098,
+            4.2103,
+            3.0912,
+            3.1436,
+            3.3256
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "bs4 + lxml [decompose]": {
+          "min_ms": 128.0899,
+          "median_ms": 154.3972,
+          "mean_ms": 150.2945,
+          "iqr_ms": 40.527,
+          "max_ms": 172.084,
+          "samples_ms": [
+            172.084,
+            164.9361,
+            154.3972,
+            170.4734,
+            128.0899,
+            132.1342,
+            129.9464
+          ],
+          "repeat": 7,
+          "validated": true
+        }
+      }
+    },
+    {
+      "scenario": "07a_adaptive_hot_400",
+      "label": "Adaptive Hot Path (Selector Matches, 400 filler nodes)",
+      "bytes": 35115,
+      "timings": {
+        "oxide_parse [lite] (v1 match)": {
+          "min_ms": 0.3141,
+          "median_ms": 0.4385,
+          "mean_ms": 0.5332,
+          "iqr_ms": 0.1223,
+          "max_ms": 1.3897,
+          "samples_ms": [
+            0.3344,
+            0.3546,
+            0.3141,
+            0.4442,
+            1.3897,
+            0.4385,
+            0.4567
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "oxide_parse [scraper] (v1 match)": {
+          "min_ms": 1.3645,
+          "median_ms": 1.5702,
+          "mean_ms": 1.5487,
+          "iqr_ms": 0.3294,
+          "max_ms": 1.7659,
+          "samples_ms": [
+            1.3886,
+            1.3645,
+            1.3999,
+            1.7659,
+            1.5702,
+            1.718,
+            1.6339
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "scrapling [SQLite memory] (v1 match)": {
+          "min_ms": 5.8406,
+          "median_ms": 6.857,
+          "mean_ms": 7.0321,
+          "iqr_ms": 1.12,
+          "max_ms": 10.7867,
+          "samples_ms": [
+            5.8412,
+            6.0615,
+            6.857,
+            10.7867,
+            5.8406,
+            6.8765,
+            6.9612
+          ],
+          "repeat": 7,
+          "validated": true
+        }
+      }
+    },
+    {
+      "scenario": "07b_adaptive_relocate_400",
+      "label": "Adaptive Cold Path (Broken Selector Relocation across 400 nodes)",
+      "bytes": 35146,
+      "timings": {
+        "oxide_parse [lite] (v2 relocate)": {
+          "min_ms": 2.1032,
+          "median_ms": 2.4851,
+          "mean_ms": 2.626,
+          "iqr_ms": 0.7653,
+          "max_ms": 3.2305,
+          "samples_ms": [
+            2.4851,
+            2.2219,
+            2.1032,
+            2.442,
+            2.9872,
+            2.9121,
+            3.2305
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "oxide_parse [scraper] (v2 relocate)": {
+          "min_ms": 3.0324,
+          "median_ms": 3.4636,
+          "mean_ms": 4.0119,
+          "iqr_ms": 1.9373,
+          "max_ms": 6.3071,
+          "samples_ms": [
+            3.4636,
+            3.0324,
+            3.2911,
+            6.3071,
+            5.1382,
+            3.65,
+            3.2009
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "scrapling [SQLite memory] (v2 relocate)": {
+          "min_ms": 560.45,
+          "median_ms": 612.1434,
+          "mean_ms": 620.1848,
+          "iqr_ms": 107.0016,
+          "max_ms": 696.3095,
+          "samples_ms": [
+            678.7858,
+            560.45,
+            608.2117,
+            696.3095,
+            613.6088,
+            612.1434,
+            571.7842
+          ],
+          "repeat": 7,
+          "validated": true
+        }
+      }
+    },
+    {
+      "scenario": "07a_adaptive_hot_1600",
+      "label": "Adaptive Hot Path (Selector Matches, 1600 filler nodes)",
+      "bytes": 141315,
+      "timings": {
+        "oxide_parse [lite] (v1 match)": {
+          "min_ms": 0.9385,
+          "median_ms": 1.0971,
+          "mean_ms": 1.2242,
+          "iqr_ms": 0.6842,
+          "max_ms": 1.739,
+          "samples_ms": [
+            1.1976,
+            1.6499,
+            1.739,
+            0.9657,
+            0.9385,
+            1.0971,
+            0.9818
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "oxide_parse [scraper] (v1 match)": {
+          "min_ms": 4.548,
+          "median_ms": 6.1133,
+          "mean_ms": 6.2789,
+          "iqr_ms": 3.2209,
+          "max_ms": 9.7506,
+          "samples_ms": [
+            4.548,
+            9.7506,
+            7.8414,
+            6.1133,
+            4.6205,
+            6.1894,
+            4.8894
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "scrapling [SQLite memory] (v1 match)": {
+          "min_ms": 15.779,
+          "median_ms": 18.4874,
+          "mean_ms": 18.7293,
+          "iqr_ms": 3.608,
+          "max_ms": 23.3832,
+          "samples_ms": [
+            16.2575,
+            23.3832,
+            19.8655,
+            19.2509,
+            18.4874,
+            18.0814,
+            15.779
+          ],
+          "repeat": 7,
+          "validated": true
+        }
+      }
+    },
+    {
+      "scenario": "07b_adaptive_relocate_1600",
+      "label": "Adaptive Cold Path (Broken Selector Relocation across 1600 nodes)",
+      "bytes": 141346,
+      "timings": {
+        "oxide_parse [lite] (v2 relocate)": {
+          "min_ms": 8.0089,
+          "median_ms": 9.8938,
+          "mean_ms": 9.6977,
+          "iqr_ms": 1.7718,
+          "max_ms": 11.7898,
+          "samples_ms": [
+            8.6233,
+            9.2445,
+            8.0089,
+            11.7898,
+            10.3951,
+            9.8938,
+            9.9288
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "oxide_parse [scraper] (v2 relocate)": {
+          "min_ms": 11.7761,
+          "median_ms": 15.7905,
+          "mean_ms": 15.5674,
+          "iqr_ms": 5.1229,
+          "max_ms": 19.2311,
+          "samples_ms": [
+            11.7761,
+            12.2541,
+            19.2311,
+            15.5322,
+            17.0108,
+            17.377,
+            15.7905
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "scrapling [SQLite memory] (v2 relocate)": {
+          "min_ms": 3957.6143,
+          "median_ms": 4445.675,
+          "mean_ms": 4488.3614,
+          "iqr_ms": 285.6966,
+          "max_ms": 4893.9538,
+          "samples_ms": [
+            3957.6143,
+            4398.7878,
+            4893.9538,
+            4601.6058,
+            4684.4844,
+            4445.675,
+            4436.4088
+          ],
+          "repeat": 7,
+          "validated": true
+        }
+      }
+    },
+    {
+      "scenario": "08_batch_parallel",
+      "label": "Batch 32 docs x 500 noisy products (9813 KiB total)",
+      "bytes": 10048896,
+      "timings": {
+        "oxide_parse [scraper] extract_many (Rayon)": {
+          "min_ms": 216.8126,
+          "median_ms": 238.3306,
+          "mean_ms": 239.2497,
+          "iqr_ms": 24.6308,
+          "max_ms": 266.3518,
+          "samples_ms": [
+            245.5638,
+            216.8126,
+            252.1562,
+            227.5254,
+            228.0073,
+            238.3306,
+            266.3518
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "oxide_parse [scraper] sequential loop": {
+          "min_ms": 551.9145,
+          "median_ms": 586.0524,
+          "mean_ms": 583.6486,
+          "iqr_ms": 30.0942,
+          "max_ms": 607.3445,
+          "samples_ms": [
+            551.9145,
+            594.7518,
+            586.0524,
+            565.3888,
+            607.3445,
+            595.483,
+            584.6049
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "oxide_parse [lite] extract_many (Rayon)": {
+          "min_ms": 44.2971,
+          "median_ms": 47.8098,
+          "mean_ms": 51.6108,
+          "iqr_ms": 12.8147,
+          "max_ms": 60.2101,
+          "samples_ms": [
+            58.1164,
+            60.2101,
+            58.8108,
+            46.0355,
+            47.8098,
+            45.9961,
+            44.2971
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "oxide_parse [lite] sequential loop": {
+          "min_ms": 101.0212,
+          "median_ms": 108.6895,
+          "mean_ms": 108.5527,
+          "iqr_ms": 2.8514,
+          "max_ms": 117.634,
+          "samples_ms": [
+            101.0212,
+            109.0917,
+            108.6895,
+            117.634,
+            109.0905,
+            108.1015,
+            106.2403
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "oxide_parse [stream] extract_many (Rayon)": {
+          "min_ms": 37.8539,
+          "median_ms": 41.4047,
+          "mean_ms": 43.2107,
+          "iqr_ms": 5.3737,
+          "max_ms": 54.2061,
+          "samples_ms": [
+            40.5473,
+            40.1271,
+            41.4047,
+            37.8539,
+            54.2061,
+            42.8347,
+            45.5008
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "oxide_parse [stream] sequential loop": {
+          "min_ms": 87.5657,
+          "median_ms": 102.5332,
+          "mean_ms": 102.8982,
+          "iqr_ms": 14.5473,
+          "max_ms": 116.9082,
+          "samples_ms": [
+            116.9082,
+            87.5657,
+            110.9287,
+            99.716,
+            102.5332,
+            96.3814,
+            106.254
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "selectolax [lexbor] sequential loop": {
+          "min_ms": 377.948,
+          "median_ms": 419.1119,
+          "mean_ms": 421.7981,
+          "iqr_ms": 53.8886,
+          "max_ms": 475.6696,
+          "samples_ms": [
+            440.915,
+            419.1119,
+            390.9835,
+            475.6696,
+            444.8721,
+            403.0868,
+            377.948
+          ],
+          "repeat": 7,
+          "validated": true
+        }
+      }
+    },
+    {
+      "scenario": "09a_number_parser_bottleneck",
+      "label": "Internal Profiler: Fast ASCII vs Localized Number Parsing (2000 items, run_native)",
+      "bytes": 146709,
+      "timings": {
+        "scraper: fast ASCII ('$19.99')": {
+          "min_ms": 8.1197,
+          "median_ms": 12.8104,
+          "mean_ms": 12.0952,
+          "iqr_ms": 3.0088,
+          "max_ms": 13.9768,
+          "samples_ms": [
+            10.8401,
+            13.8489,
+            11.8086,
+            13.2617,
+            13.9768,
+            12.8104,
+            8.1197
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "scraper: localized ('1 299,50 ₽')": {
+          "min_ms": 9.4005,
+          "median_ms": 13.1963,
+          "mean_ms": 13.3294,
+          "iqr_ms": 6.264,
+          "max_ms": 17.4842,
+          "samples_ms": [
+            13.1775,
+            17.4842,
+            13.1963,
+            14.8547,
+            15.7283,
+            9.4005,
+            9.4643
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "lite: fast ASCII ('$19.99')": {
+          "min_ms": 3.1377,
+          "median_ms": 4.6644,
+          "mean_ms": 4.5861,
+          "iqr_ms": 0.6197,
+          "max_ms": 6.0193,
+          "samples_ms": [
+            4.2591,
+            4.8788,
+            4.2785,
+            4.6644,
+            6.0193,
+            4.8649,
+            3.1377
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "lite: localized ('1 299,50 ₽')": {
+          "min_ms": 4.4226,
+          "median_ms": 5.7375,
+          "mean_ms": 5.6988,
+          "iqr_ms": 0.9757,
+          "max_ms": 6.8624,
+          "samples_ms": [
+            5.8604,
+            6.1451,
+            5.1694,
+            5.7375,
+            6.8624,
+            5.6943,
+            4.4226
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "stream: fast ASCII ('$19.99')": {
+          "min_ms": 2.6029,
+          "median_ms": 3.5756,
+          "mean_ms": 3.3357,
+          "iqr_ms": 1.2488,
+          "max_ms": 3.9619,
+          "samples_ms": [
+            3.8746,
+            3.6925,
+            3.0167,
+            3.9619,
+            3.5756,
+            2.6258,
+            2.6029
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "stream: localized ('1 299,50 ₽')": {
+          "min_ms": 3.6928,
+          "median_ms": 4.865,
+          "mean_ms": 4.7122,
+          "iqr_ms": 0.7093,
+          "max_ms": 5.2237,
+          "samples_ms": [
+            4.865,
+            5.2237,
+            4.5868,
+            5.106,
+            5.1101,
+            4.4008,
+            3.6928
+          ],
+          "repeat": 7,
+          "validated": true
+        }
+      }
+    },
+    {
+      "scenario": "09b_selector_fanout_bottleneck",
+      "label": "Internal Profiler: 2 Selectors vs 11 Selectors on 1000 noisy cards (run_native)",
+      "bytes": 628385,
+      "timings": {
+        "scraper: 2 selectors (run_native)": {
+          "min_ms": 31.1368,
+          "median_ms": 39.1639,
+          "mean_ms": 40.4146,
+          "iqr_ms": 14.9811,
+          "max_ms": 54.7461,
+          "samples_ms": [
+            32.3038,
+            47.2849,
+            54.7461,
+            39.1639,
+            33.3204,
+            31.1368,
+            44.9461
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "scraper: 11 selectors incl. 5 misses (run_native)": {
+          "min_ms": 44.6764,
+          "median_ms": 54.4227,
+          "mean_ms": 54.8734,
+          "iqr_ms": 14.857,
+          "max_ms": 66.6957,
+          "samples_ms": [
+            61.4451,
+            60.7863,
+            66.6957,
+            49.4993,
+            44.6764,
+            46.5881,
+            54.4227
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "lite: 2 selectors (run_native)": {
+          "min_ms": 5.1229,
+          "median_ms": 6.5653,
+          "mean_ms": 6.2827,
+          "iqr_ms": 1.2395,
+          "max_ms": 6.9518,
+          "samples_ms": [
+            6.5653,
+            6.7689,
+            6.9315,
+            5.692,
+            5.9468,
+            6.9518,
+            5.1229
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "lite: 11 selectors incl. 5 misses (run_native)": {
+          "min_ms": 8.0299,
+          "median_ms": 9.066,
+          "mean_ms": 9.3794,
+          "iqr_ms": 1.1864,
+          "max_ms": 11.6648,
+          "samples_ms": [
+            8.5252,
+            11.6648,
+            9.6715,
+            9.066,
+            9.7116,
+            8.0299,
+            8.9868
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "stream: 2 selectors (run_native)": {
+          "min_ms": 4.1373,
+          "median_ms": 5.3308,
+          "mean_ms": 5.6609,
+          "iqr_ms": 1.6784,
+          "max_ms": 9.3043,
+          "samples_ms": [
+            4.1373,
+            5.3308,
+            6.0753,
+            4.7087,
+            9.3043,
+            4.3969,
+            5.6731
+          ],
+          "repeat": 7,
+          "validated": true
+        },
+        "stream: 11 selectors incl. 5 misses (run_native)": {
+          "min_ms": 6.4195,
+          "median_ms": 7.4413,
+          "mean_ms": 8.8573,
+          "iqr_ms": 5.6123,
+          "max_ms": 12.9511,
+          "samples_ms": [
+            6.7496,
+            12.3619,
+            8.6981,
+            7.3795,
+            7.4413,
+            12.9511,
+            6.4195
+          ],
+          "repeat": 7,
+          "validated": true
+        }
+      }
+    }
+  ]
+}

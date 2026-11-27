@@ -1,0 +1,134 @@
+{
+  "source": "https://html.spec.whatwg.org/",
+  "input_sha256": "ad8adbe54f0e61a79fb513069d172b6a31a4753f002ab7054a6de0d8447ab24c",
+  "bytes": 15980221,
+  "python": "3.13.7",
+  "native_sha256": "5e871eb4c5511fbd57c58447e980d2afc2bc7e86c8eae7dcdea474db1cadada0",
+  "selectolax_version": "1.0.2",
+  "selectors": {
+    "n_h2": "h2",
+    "n_dfn": "dfn[id]",
+    "n_code_in_pre": "div.example pre > code, pre > code",
+    "n_ext_links": "a[href^='https://']",
+    "n_tables": "table > tbody > tr > td",
+    "n_not_Note": "p:not(.note)",
+    "n_nth": "ul > li:nth-child(2n+1)"
+  },
+  "order": [
+    "selectolax",
+    "stream",
+    "lite",
+    "scraper"
+  ],
+  "repeat": 3,
+  "results": [
+    {
+      "engine": "selectolax",
+      "status": "PASS",
+      "result": {
+        "title": "HTML Standard",
+        "n_h2": 23,
+        "n_dfn": 7192,
+        "n_code_in_pre": 1248,
+        "n_ext_links": 16241,
+        "n_tables": 12658,
+        "n_not_Note": 25221,
+        "n_nth": 2173
+      },
+      "median_ms": 408.6640999885276,
+      "samples_ms": [
+        433.5525999777019,
+        408.6640999885276,
+        404.9349999986589
+      ]
+    },
+    {
+      "engine": "stream",
+      "status": "PASS",
+      "result": {
+        "title": "HTML Standard",
+        "n_h2": 23,
+        "n_dfn": 7192,
+        "n_code_in_pre": 1248,
+        "n_ext_links": 16241,
+        "n_tables": 12658,
+        "n_not_Note": 25221,
+        "n_nth": 2173
+      },
+      "median_ms": 131.9146000314504,
+      "samples_ms": [
+        129.4403999345377,
+        143.6442999402061,
+        131.9146000314504
+      ]
+    },
+    {
+      "engine": "lite",
+      "status": "PASS",
+      "result": {
+        "title": "HTML Standard",
+        "n_h2": 23,
+        "n_dfn": 7192,
+        "n_code_in_pre": 1248,
+        "n_ext_links": 16241,
+        "n_tables": 12658,
+        "n_not_Note": 25221,
+        "n_nth": 2173
+      },
+      "median_ms": 212.74250000715256,
+      "samples_ms": [
+        212.74250000715256,
+        212.16380002442747,
+        218.5518000042066
+      ]
+    },
+    {
+      "engine": "scraper",
+      "status": "PASS",
+      "result": {
+        "title": "HTML Standard",
+        "n_h2": 23,
+        "n_dfn": 7192,
+        "n_code_in_pre": 1248,
+        "n_ext_links": 16241,
+        "n_tables": 12658,
+        "n_not_Note": 25221,
+        "n_nth": 2173
+      },
+      "median_ms": 749.9413000186905,
+      "samples_ms": [
+        812.9145998973399,
+        749.9413000186905,
+        689.3479999853298
+      ]
+    }
+  ],
+  "selectolax_adapter": "Deduplicates overlapping CSS-list matches by node.mem_id; deduplication is timed",
+  "comparisons": [
+    {
+      "engines": [
+        "lite",
+        "stream"
+      ],
+      "status": "PASS",
+      "differences": {}
+    },
+    {
+      "engines": [
+        "lite",
+        "scraper"
+      ],
+      "status": "PASS",
+      "differences": {}
+    },
+    {
+      "engines": [
+        "scraper",
+        "selectolax"
+      ],
+      "status": "PASS",
+      "differences": {}
+    }
+  ],
+  "timing_note": "Same cached real input; process startup and compilation excluded; one warmup; engine order seeded; no thermal/load isolation. Mismatched results invalidate speed comparisons."
+}

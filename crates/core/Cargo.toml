@@ -1,0 +1,72 @@
+[package]
+name = "oxide_parse-core"
+version = "0.9.1"
+edition = "2021"
+description = "Declarative extraction engine: IR -> compiled plan -> fast execution over pluggable engines"
+license = "MIT"
+
+[lib]
+name = "oxide_parse_core"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["preserve_order"] }
+indexmap = { version = "2", features = ["serde"] }
+regex = "1"
+thiserror = "1"
+scraper = { version = "0.20", optional = true }
+serde_yaml = { version = "0.9", optional = true }
+memchr = { version = "2", optional = true }
+
+# Engines are opt-in: you only compile (and ship) what you use.
+[features]
+default = ["engine-scraper", "engine-json"]
+# DOM engines
+engine-scraper = ["dep:scraper"]            # html5ever: spec-correct HTML5 tree, full CSS
+engine-lite = ["dep:memchr"]                # own zero-copy tokenizer + arena DOM, CSS + XPath, tiny
+# streaming engine (no DOM). Falls back to `lite` for schemas it cannot stream.
+engine-stream = ["engine-lite"]
+# data engines
+engine-json = []
+# presets
+fast = ["engine-lite", "engine-stream", "engine-json"]
+full = ["engine-scraper", "engine-lite", "engine-stream", "engine-json", "yaml"]
+# misc
+yaml = ["dep:serde_yaml"]
+# backwards-compatible aliases
+html = ["engine-scraper"]
+json = ["engine-json"]
+
+[dev-dependencies]
+criterion = "0.5"
+
+[[bench]]
+name = "extract"
+harness = false
+required-features = ["engine-scraper"]
+
+[[bench]]
+name = "engines"
+harness = false
+required-features = ["full"]
+
+[[bench]]
+name = "stages"
+harness = false
+required-features = ["engine-lite", "engine-stream"]
+
+[[example]]
+name = "basic"
+required-features = ["engine-scraper"]
+
+[[example]]
+name = "follow"
+required-features = ["engine-scraper"]
+
+[[example]]
+name = "json"
+required-features = ["engine-json"]
+
+[[example]]
+name = "engines"
+required-features = ["full"]

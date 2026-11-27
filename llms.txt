@@ -1,0 +1,43 @@
+# oxide_parse
+
+> Declarative HTML, XML & JSON extractor: Python DSL (`T`) -> JSON IR -> Rust plan (`stream`, `lite`/`scraper`, `xml`, `json`), Zero-IO `Session`, self-healing `adaptive` selectors.
+
+## DSL & Compilation Rules
+
+- Import: `from oxide_parse import T, compile, follow, paginate, if_, coalesce`
+- Compile once: `plan = compile(schema, backend="auto")` (`auto`, `stream`, `lite`, `scraper`, `xml`, `json`), then `plan.extract(doc, meta={"base_url": ...})`.
+- Null-safe: missing -> `None`. `.default(v)` falls back, `.required()` fails.
+- `.text()`, `.attr()`, `.html()` read the **first** node; use `.map({...})` for lists (`on_error="skip"|"null"` quarantines bad rows).
+- Never use Python `if/else`, `and/or/not`, `for`, `try/except` in `schema`; use `&`, `|`, `~`, `if_(c, t, o)`, `coalesce(a, b)`.
+- Stay in `stream` (`backend="auto"`): avoid `xpath`, `parent`, `filter`, `+`, `~`, `:has`, `:contains`, `:last-child`, `adaptive`.
+
+## Operations (`T`)
+
+- Navigation: `css(sel, adaptive=key, threshold=0.5)` `:scope > .c` `xpath(expr)` `first()` `last()` `at(i)` `[i]` `[a:b]` `slice(a, b)` `rest()` `parent()` `children()` `root()` `key(k)` `["k"]`
+- Extraction: `text(sep, strip, without, br, deep)` `own_text()` `own_texts()` `table(mode)` `main_content()` `attr()` `has_attr()` `html()` `inner_html()` `markdown()` `distill()` `meta()`
+- Strings & types: `strip()` `lower()` `upper()` `replace(a, b)` `split(sep)` `join(sep)` `regex(pat, g)` `regex_all(pat, g)` `int()` `float()` `price()` `parse_srcset(pick)` `bool()` `url(base)` `link_header(rel)`
+- Hybrid & flat: `parse_json()` `parse_html(s)` `js_json(var)` `json_ld(type, resolve_refs)` `microdata(type)` `next_flight(key)` `meta_tags()` `sections()` `group_by()` `kv(label)`
+- Collections & logic: `count()` `exists()` `map(body, on_error=None)` `flat_map(body)` `filter(pred)` `unique(by=None, keep="first")` `default(v)` `required()` `non_empty()` `coalesce(*alts)` `eq` `ne` `contains` `startswith` `endswith` `not_()` `and_()` `or_()` `if_(c, t, o)`
+- I/O, codecs & crawl: `Plan.dumps/loads/dump/load` (`json`, `yaml`, `toml`, `python`, `register_format`) `follow` `paginate` `crawl`/`acrawl` `extract_jsonl`/`extract_csv` `migrate.patch_crawl4ai_prompt()`
+
+## Documentation
+
+- [Documentation Index](docs/index.md): Guides, prompts, specs
+- [Quickstart](docs/guide/01_quickstart.md): Install, parser, errors, JSON round-trip
+- [DSL Cheatsheet](docs/guide/02_dsl_cheatsheet.md): Complete `T` examples
+- [Choosing an Engine](docs/guide/03_choosing_engine.md): `auto`, `stream`, `lite`, `scraper`, `xml`, `json`, `explain()`
+- [Hybrid HTML + JSON](docs/guide/04_hybrid_html_json.md): `__NEXT_DATA__`, `js_json`, `json_ld`, `meta_tags`
+- [Adaptive & Repair](docs/guide/05_adaptive_and_repair.md): Fingerprints, `extract_or_repair`, `with_selectors`, `to_python`
+- [Follow & Pagination](docs/guide/06_follow_and_crawling.md): Sync/async `follow`, `paginate`, `Session`, `extract_batch`
+- [RAG, Markdown & Migration](docs/guide/07_llm_rag_markdown.md): `distill`, `markdown`, Crawl4AI & selector-map migration
+
+## AI Prompts & Specs
+
+- [Prompt: Generate Schema](docs/ai/prompt_generate_schema.md): Prompt for HTML -> schema
+- [Prompt: Migrate Parser](docs/ai/prompt_migrate.md): Crawl4AI, Scrapy, BS4, Selectolax, Scrapling
+- [Prompt: Self-Healing Repair](docs/ai/prompt_self_healing.md): Prompt for `repair` callbacks
+- [IR Specification](docs/reference/ir_spec.md): `Expr`/`Op` spec, `validate_ir()`
+- [IR JSON Schema](python/oxide_parse/ir.schema.json): Draft 2020-12 IR schema
+- [Python API](docs/reference/python_api.md): API signatures and engine badges
+- [CSS & XPath Support](docs/reference/selectors_and_xpath.md): Selector and XPath matrix
+- [CLI Reference](docs/reference/cli.md): `oxide-parse` commands (`distill`, `markdown`, `run`, `validate`, `migrate`, `prompt`)

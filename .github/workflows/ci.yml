@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  rust:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+      - run: cargo test -p oxide_parse-core --locked --features full
+      # the build must work with a single engine, and without `lite` (no distill / stream)
+      - run: cargo check -p oxide_parse-core --locked --no-default-features --features engine-scraper
+      - run: cargo check -p oxide_parse-core --locked --no-default-features --features engine-lite
+      - run: cargo check -p oxide_parse-core --locked --no-default-features --features fast
+
+  python:
+    runs-on: ubuntu-22.04
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.9", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+      - run: pip install maturin pytest pyyaml lxml
+      - name: IR JSON Schema is up to date
+        run: python scripts/gen_ir_schema.py --check
+      - run: python -m pip install ".[toml]"
+      - run: python -m pytest -q

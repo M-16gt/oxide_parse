@@ -1,0 +1,150 @@
+name: Build and publish Python package
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pypi-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    if: github.event.repository.private || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+      - name: Check release version
+        shell: python
+        run: |
+          import os
+          import pathlib
+          import tomllib
+          version = tomllib.loads(pathlib.Path('pyproject.toml').read_text())['project']['version']
+          if os.environ['GITHUB_REF_TYPE'] == 'tag':
+              assert os.environ['GITHUB_REF_NAME'] == f'v{version}', 'Tag must match pyproject.toml version'
+      - name: Check generated IR schema
+        run: python scripts/gen_ir_schema.py --check
+      - uses: dtolnay/rust-toolchain@stable
+      - run: cargo test -p oxide_parse-core --locked --features full
+
+  wheels:
+    needs: validate
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {os: ubuntu-22.04, target: x86_64-unknown-linux-gnu, compatibility: manylinux2014, kind: native}
+          - {os: ubuntu-24.04-arm, target: aarch64-unknown-linux-gnu, compatibility: manylinux2014, kind: native}
+          - {os: ubuntu-22.04, target: x86_64-unknown-linux-musl, compatibility: musllinux_1_2, kind: musl}
+          - {os: ubuntu-24.04-arm, target: aarch64-unknown-linux-musl, compatibility: musllinux_1_2, kind: musl}
+          - {os: macos-15-intel, target: x86_64-apple-darwin, compatibility: auto, kind: native}
+          - {os: macos-15, target: aarch64-apple-darwin, compatibility: auto, kind: native}
+          - {os: windows-2022, target: x86_64-pc-windows-msvc, compatibility: auto, kind: native}
+          - {os: windows-11-arm, target: aarch64-pc-windows-msvc, compatibility: auto, kind: native}
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+      - uses: PyO3/maturin-action@v1
+        with:
+          command: build
+          target: ${{ matrix.target }}
+          manylinux: ${{ matrix.compatibility }}
+          args: --release --locked --features full,abi3,pyo3/extension-module --out dist --interpreter python3.13
+      - name: Test installed wheel
+        if: matrix.kind == 'native'
+        shell: bash
+        run: |
+          python -m pip install --only-binary=:all: --no-deps dist/*.whl
+          python -m pip install "oxide-parse[test,yaml,toml]"
+          python -m pytest tests -q --tb=short
+      - name: Test installed musllinux wheel in Alpine
+        if: matrix.kind == 'musl'
+        shell: bash
+        run: |
+          docker run --rm -v "$PWD:/work" -w /work python:3.13-alpine sh -ec '
+            pip install --no-deps /work/dist/*.whl
+            pip install pytest
+            python -m pytest tests/test_dsl.py tests/test_native.py -q --tb=short
+          '
+      - uses: actions/upload-artifact@v4
+        with:
+          name: wheels-${{ matrix.target }}
+          path: dist/*.whl
+          if-no-files-found: error
+
+  sdist:
+    needs: validate
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+      - uses: PyO3/maturin-action@v1
+        with:
+          command: sdist
+          args: --out dist
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Build and test the source distribution
+        shell: bash
+        run: |
+          sdists=(dist/*.tar.gz)
+          python -m pip install "${sdists[0]}[test,yaml,toml]"
+          python -m pytest tests -q --tb=short
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sdist
+          path: dist/*.tar.gz
+          if-no-files-found: error
+
+  python-compatibility:
+    needs: wheels
+    runs-on: ubuntu-22.04
+    strategy:
+      matrix:
+        python: ["3.10", "3.14"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python }}
+      - uses: actions/download-artifact@v4
+        with:
+          name: wheels-x86_64-unknown-linux-gnu
+          path: dist
+      - name: Test stable ABI on supported Python versions
+        shell: bash
+        run: |
+          python -m pip install --no-deps dist/*.whl
+          python -m pip install "oxide-parse[test,yaml,toml]"
+          python -m pytest tests -q --tb=short
+
+  publish:
+    needs: [wheels, sdist, python-compatibility]
+    if: github.event.repository.private && startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: wheels-*
+          merge-multiple: true
+          path: dist
+      - uses: actions/download-artifact@v4
+        with:
+          name: sdist
+          path: dist
+      - uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          user: __token__
+          password: ${{ secrets.PYPI_API_TOKEN }}

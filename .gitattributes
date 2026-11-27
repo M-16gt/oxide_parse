@@ -1,0 +1,6 @@
+* text=auto eol=lf
+*.lock -diff
+tests/fixtures/conformance/html5lib-tests/** -text
+tests/fixtures/conformance/cascadia/** -text
+tests/fixtures/conformance/css-select/** -text
+tests/fixtures/conformance/libxml2/** -text

@@ -1,0 +1,1104 @@
+{
+  "started_utc": "2026-11-10T09:57:10.400967+00:00",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "./.venv\\Scripts\\python.exe",
+  "processor": "Intel64 Family 6 Model 190 Stepping 0, GenuineIntel",
+  "native_sha256": "ce843d351d0d32a400b2447ffad7a008ded06a621b4a445bfc6d9ac9148bb794",
+  "source_files_sha256": {
+    ".cargo/config.toml": "32ddff2d3556aae85985afa3800ee38b803883af4b8a57538c2ba7321f799dcc",
+    "Cargo.lock": "c802001c8017581762a105d38861259e1d8cf279a3c5b9da1bf7cfa663ce322f",
+    "Cargo.toml": "812d3b95e3eee4ab568bdab3dfb1a41add48a3db731c29c1077ba5376fda00b1",
+    "benches/bench_python.py": "e10343807439e1fa0d5795501666b26239e9505d53fe24eb9c864edface56194",
+    "benches/bench_suite.py": "1816dcfd9d73a851492a08d5777e4e9a9b1c3bd332e8e36b48835c8e681f6bee",
+    "crates/core/Cargo.toml": "b1b274541ceedd590812a3ea7c10bc5864f0007d3a9fde1dafea8fb33185e851",
+    "crates/core/benches/engines.rs": "34cbcfd2233e1015766a037c0cbea14b0b45a5366ee94d782939e1e142dd29c5",
+    "crates/core/benches/extract.rs": "055296875b23a41af458c583e237f2ccf9b3c787c72a5f2441b43a6125261180",
+    "crates/core/benches/stages.rs": "350c7181c0f135037d8b38c0ae60da1785207437cb013bddb8f9d9650d2d5a90",
+    "crates/core/examples/basic.rs": "cafbf8ac777ea5926ee450ae31e0517f737c9e2927b07432c43189ca19c1107b",
+    "crates/core/examples/engines.rs": "9d588378c0cf2a54547242bd3798701556cb076b34a12a31b97b6f0ffbea5d4d",
+    "crates/core/examples/follow.rs": "143c22e6750533a10a017f8230b8bb95d6345958af364e769eeef72efe552a4d",
+    "crates/core/examples/json.rs": "0e38cd7e47d6d9f265504bfc879cd4c78874c4d80f0dcb43bfbe77cfc64d4d0e",
+    "crates/core/src/adaptive.rs": "88c31ad99d15f1009b73621befa3e0b6be73428267d19079e4705a323a5c6528",
+    "crates/core/src/dom.rs": "a8db09150e4e8d7912dcc3ed5ec793ec17cb757fe41b56e75bc0ecbf7da46822",
+    "crates/core/src/engine.rs": "94fe43bcaef809a8f1333e9dcfe9c3b0147d97e5be42c43f50a67af38d7e7f9a",
+    "crates/core/src/engines/json.rs": "48da71bd02d46c313031e096a8b94fc1a85fd0b4cb36923269e4e8d7b108f9f4",
+    "crates/core/src/engines/lite.rs": "042be78941e8f8106595031c7b1fbc966a8addfbc5f87958a03187339741ea79",
+    "crates/core/src/engines/mod.rs": "45bb314103592099e986d57a9cfd0b47130e48aa82aa98f4550d6225be72d685",
+    "crates/core/src/engines/scraper.rs": "5aab4dd8e47646d7adedd07a8fbf9015afbf0853089aa22ae92c2f6233418ed9",
+    "crates/core/src/engines/stream.rs": "44350d427fe10b7ce44a91990afe81ccc1f9c509e7f1f6a446c3b8c2dcf5f44f",
+    "crates/core/src/error.rs": "c0c56880d92a376cd4f9869d57c1fcbe138c6ebce4262b356866d5104f6215bb",
+    "crates/core/src/exec.rs": "0b10ae5d32d5ebf60c02be3546b20a76961401f048a80372d9123aeb194678d9",
+    "crates/core/src/ir.rs": "f5e5b874a6cb42a0338dbc4f75bf6aca8efc1ff8e7a945f3b3641aa9fc417f96",
+    "crates/core/src/lib.rs": "ebe766705063eaef006e8dd8d2fff45fa0e861c700ce86232afb69d7b293a3f0",
+    "crates/core/src/markup/arena.rs": "f4d0c573fae1728998d1fad2f5ff0c1e37be4508600ac4f0b7c47f344eb9fa3e",
+    "crates/core/src/markup/css.rs": "eb43a16c591af9f8a5455617dbd0ec09b0c79108128962844697d7819ffba1af",
+    "crates/core/src/markup/entities.rs": "b8604b2d1a21d86c538a4597fe2c444e0b03695a40dba3cdfa742f28575d58cd",
+    "crates/core/src/markup/events.rs": "93b3dadd653a4b191585f7e6c14ca0fe8bacbc03a96f983925d8d852aaecbc32",
+    "crates/core/src/markup/mod.rs": "bcbb73086f07d728f49dab1c9e54f5c923e8b93d13d9d244c1f0cbf4b401c7f4",
+    "crates/core/src/markup/tokenizer.rs": "a53b3ba89c2020e5fd9a603d314c21c4b8000eba8ca078a082a69f963b2ecbce",
+    "crates/core/src/plan.rs": "b0cfb1d2b5b683cd112b453e96305908e44c6354b871415769a1809bf82dddb8",
+    "crates/core/src/value.rs": "9d86268d78dda3c7a939a7ed0b5f459b79adb902a7669ab0756af6f066c950c9",
+    "crates/core/src/xpath/mod.rs": "8528101fb7aeacf8f4fc3b7306f4c2bc2aa33617c9a3126ec7a4a9203f7cfcc8",
+    "crates/core/src/xpath/parser.rs": "cbc21be311a7bfe4215f81f8907a0b5b3d97d06011e826fe199898e317d9070a",
+    "crates/core/tests/basic.rs": "4a3043cdf1072ed36c78dd33d0f4999d5e8a6e6ada171956381ce1148a2df384",
+    "crates/core/tests/engines.rs": "d18f596b62d653153c226d58cf68996adbefc5d7144898995d217c0f3bc523c6",
+    "crates/py/Cargo.toml": "4b50b05bd73d9c7399871a00bccccca63561bffec13dd1cdbdfd9ee1c66ac582",
+    "crates/py/src/lib.rs": "3088e787763dabcbc19ce8d8d812120e1599f4244c283b240a7a4d6a5238348a",
+    "pyproject.toml": "d2d61006cad6bc4767c6264e6167626c9669c7d90aa745bdc553fa883254b4ab",
+    "python/oxide_parse/__init__.py": "8013fd28fb312e298cb4e3a44764bf230bd4b6b84f8e01b2846f127785fcc0e6",
+    "python/oxide_parse/_core.pyi": "4cb746d868da58bc6d659dfb8878f51ac8b52fb6631e597bfd828e3eeed1fd60",
+    "python/oxide_parse/decompile.py": "f78cef997859742fc7f76d250481ec64b821b03c477db8357cb74892341cc585",
+    "python/oxide_parse/expr.py": "2e00e9acb61b4af9196de2cd1ea967bf82dfecbb572431b40446ece2e46ef690",
+    "python/oxide_parse/plan.py": "63b9e05fbbd3c2b71078fc61c1ab86c86eba0bb415551c166e2c2f9d3e736d9d",
+    "python/oxide_parse/py.typed": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "uv.lock": "8eb7d2419708265872f2913211500feeca01cd9bd2b341e9c71ef986beba6299"
+  },
+  "source_commit": "69c565b57dfdd3bb7f4ba824b89564b44b8b9987",
+  "working_tree_diff_sha256": "35979c266b15affc0d38ab7fa4fd946edb21630076781531bfa48969d4409752",
+  "versions": {
+    "oxide-parse": "0.1.0",
+    "beautifulsoup4": "4.15.0",
+    "lxml": "6.1.3",
+    "parsel": "1.12.1",
+    "selectolax": "1.0.2"
+  },
+  "repeat": 7,
+  "warmups": 1,
+  "seed": 20261108,
+  "gc": "enabled; collect before each timed call, outside measurement",
+  "measurement": "parse + extraction + Python result creation; precompiled oxide_parse plans; single document",
+  "scenarios": [
+    {
+      "products": 100,
+      "noise": false,
+      "bytes": 19811,
+      "orders": [
+        [
+          "parsel",
+          "oxide_parse [scraper]",
+          "bs4 + lxml",
+          "selectolax",
+          "oxide_parse [lite]",
+          "bs4 + html.parser",
+          "oxide_parse [stream]"
+        ],
+        [
+          "oxide_parse [stream]",
+          "selectolax",
+          "oxide_parse [lite]",
+          "oxide_parse [scraper]",
+          "bs4 + html.parser",
+          "parsel",
+          "bs4 + lxml"
+        ],
+        [
+          "bs4 + lxml",
+          "selectolax",
+          "oxide_parse [lite]",
+          "bs4 + html.parser",
+          "parsel",
+          "oxide_parse [stream]",
+          "oxide_parse [scraper]"
+        ],
+        [
+          "bs4 + lxml",
+          "parsel",
+          "oxide_parse [lite]",
+          "oxide_parse [scraper]",
+          "bs4 + html.parser",
+          "selectolax",
+          "oxide_parse [stream]"
+        ],
+        [
+          "selectolax",
+          "oxide_parse [scraper]",
+          "oxide_parse [stream]",
+          "bs4 + lxml",
+          "parsel",
+          "bs4 + html.parser",
+          "oxide_parse [lite]"
+        ],
+        [
+          "bs4 + lxml",
+          "oxide_parse [stream]",
+          "oxide_parse [lite]",
+          "selectolax",
+          "parsel",
+          "bs4 + html.parser",
+          "oxide_parse [scraper]"
+        ],
+        [
+          "bs4 + lxml",
+          "oxide_parse [lite]",
+          "oxide_parse [stream]",
+          "oxide_parse [scraper]",
+          "bs4 + html.parser",
+          "parsel",
+          "selectolax"
+        ]
+      ],
+      "results": {
+        "oxide_parse [scraper]": {
+          "samples_ms": [
+            1.4349,
+            1.611,
+            1.5727,
+            1.8106,
+            2.1362,
+            1.6521,
+            1.7821
+          ],
+          "median_ms": 1.6521,
+          "min_ms": 1.4349,
+          "max_ms": 2.1362
+        },
+        "oxide_parse [lite]": {
+          "samples_ms": [
+            0.8553,
+            0.7572,
+            1.7152,
+            0.6677,
+            1.2635,
+            0.6889,
+            0.7707
+          ],
+          "median_ms": 0.7707,
+          "min_ms": 0.6677,
+          "max_ms": 1.7152
+        },
+        "oxide_parse [stream]": {
+          "samples_ms": [
+            0.512,
+            0.5065,
+            0.5473,
+            1.6091,
+            0.59,
+            0.4848,
+            0.5168
+          ],
+          "median_ms": 0.5168,
+          "min_ms": 0.4848,
+          "max_ms": 1.6091
+        },
+        "bs4 + html.parser": {
+          "samples_ms": [
+            49.3796,
+            52.17,
+            62.9672,
+            69.02,
+            57.8471,
+            45.1589,
+            44.4763
+          ],
+          "median_ms": 52.17,
+          "min_ms": 44.4763,
+          "max_ms": 69.02
+        },
+        "bs4 + lxml": {
+          "samples_ms": [
+            42.298,
+            51.0694,
+            55.9926,
+            50.2211,
+            52.0503,
+            42.8018,
+            41.4233
+          ],
+          "median_ms": 50.2211,
+          "min_ms": 41.4233,
+          "max_ms": 55.9926
+        },
+        "parsel": {
+          "samples_ms": [
+            12.5511,
+            21.0304,
+            23.5485,
+            20.9866,
+            27.4958,
+            21.0043,
+            17.3254
+          ],
+          "median_ms": 21.0043,
+          "min_ms": 12.5511,
+          "max_ms": 27.4958
+        },
+        "selectolax": {
+          "samples_ms": [
+            3.402,
+            3.434,
+            4.286,
+            5.2505,
+            4.7607,
+            3.777,
+            7.1836
+          ],
+          "median_ms": 4.286,
+          "min_ms": 3.402,
+          "max_ms": 7.1836
+        }
+      }
+    },
+    {
+      "products": 100,
+      "noise": true,
+      "bytes": 30811,
+      "orders": [
+        [
+          "bs4 + html.parser",
+          "oxide_parse [lite]",
+          "oxide_parse [stream]",
+          "selectolax",
+          "oxide_parse [scraper]",
+          "bs4 + lxml",
+          "parsel"
+        ],
+        [
+          "parsel",
+          "bs4 + lxml",
+          "selectolax",
+          "oxide_parse [lite]",
+          "bs4 + html.parser",
+          "oxide_parse [stream]",
+          "oxide_parse [scraper]"
+        ],
+        [
+          "parsel",
+          "selectolax",
+          "oxide_parse [lite]",
+          "oxide_parse [stream]",
+          "oxide_parse [scraper]",
+          "bs4 + html.parser",
+          "bs4 + lxml"
+        ],
+        [
+          "oxide_parse [lite]",
+          "bs4 + html.parser",
+          "parsel",
+          "oxide_parse [stream]",
+          "bs4 + lxml",
+          "selectolax",
+          "oxide_parse [scraper]"
+        ],
+        [
+          "bs4 + lxml",
+          "oxide_parse [lite]",
+          "oxide_parse [scraper]",
+          "parsel",
+          "bs4 + html.parser",
+          "oxide_parse [stream]",
+          "selectolax"
+        ],
+        [
+          "oxide_parse [lite]",
+          "selectolax",
+          "parsel",
+          "bs4 + lxml",
+          "bs4 + html.parser",
+          "oxide_parse [scraper]",
+          "oxide_parse [stream]"
+        ],
+        [
+          "oxide_parse [scraper]",
+          "oxide_parse [stream]",
+          "selectolax",
+          "bs4 + html.parser",
+          "parsel",
+          "oxide_parse [lite]",
+          "bs4 + lxml"
+        ]
+      ],
+      "results": {
+        "oxide_parse [scraper]": {
+          "samples_ms": [
+            2.5234,
+            2.1395,
+            2.6543,
+            7.6982,
+            6.2872,
+            7.1974,
+            11.3438
+          ],
+          "median_ms": 6.2872,
+          "min_ms": 2.1395,
+          "max_ms": 11.3438
+        },
+        "oxide_parse [lite]": {
+          "samples_ms": [
+            0.9372,
+            0.7598,
+            0.8677,
+            0.6392,
+            1.2769,
+            1.5309,
+            0.8023
+          ],
+          "median_ms": 0.8677,
+          "min_ms": 0.6392,
+          "max_ms": 1.5309
+        },
+        "oxide_parse [stream]": {
+          "samples_ms": [
+            0.6436,
+            0.6479,
+            0.5302,
+            0.7196,
+            0.6581,
+            0.7348,
+            0.6972
+          ],
+          "median_ms": 0.6581,
+          "min_ms": 0.5302,
+          "max_ms": 0.7348
+        },
+        "bs4 + html.parser": {
+          "samples_ms": [
+            71.7556,
+            64.1975,
+            60.7308,
+            65.5337,
+            104.4554,
+            125.6761,
+            98.4244
+          ],
+          "median_ms": 71.7556,
+          "min_ms": 60.7308,
+          "max_ms": 125.6761
+        },
+        "bs4 + lxml": {
+          "samples_ms": [
+            64.4148,
+            63.0367,
+            54.2616,
+            64.6678,
+            109.8715,
+            108.0802,
+            101.7581
+          ],
+          "median_ms": 64.6678,
+          "min_ms": 54.2616,
+          "max_ms": 109.8715
+        },
+        "parsel": {
+          "samples_ms": [
+            16.5142,
+            16.3778,
+            14.8867,
+            14.8619,
+            29.5505,
+            19.0269,
+            21.4711
+          ],
+          "median_ms": 16.5142,
+          "min_ms": 14.8619,
+          "max_ms": 29.5505
+        },
+        "selectolax": {
+          "samples_ms": [
+            4.6117,
+            4.5494,
+            3.5765,
+            5.1163,
+            6.715,
+            5.013,
+            12.6575
+          ],
+          "median_ms": 5.013,
+          "min_ms": 3.5765,
+          "max_ms": 12.6575
+        }
+      }
+    },
+    {
+      "products": 1000,
+      "noise": false,
+      "bytes": 202401,
+      "orders": [
+        [
+          "selectolax",
+          "bs4 + html.parser",
+          "parsel",
+          "oxide_parse [lite]",
+          "bs4 + lxml",
+          "oxide_parse [scraper]",
+          "oxide_parse [stream]"
+        ],
+        [
+          "oxide_parse [lite]",
+          "bs4 + lxml",
+          "oxide_parse [scraper]",
+          "parsel",
+          "selectolax",
+          "oxide_parse [stream]",
+          "bs4 + html.parser"
+        ],
+        [
+          "selectolax",
+          "bs4 + html.parser",
+          "oxide_parse [stream]",
+          "oxide_parse [scraper]",
+          "oxide_parse [lite]",
+          "parsel",
+          "bs4 + lxml"
+        ],
+        [
+          "oxide_parse [stream]",
+          "selectolax",
+          "bs4 + lxml",
+          "parsel",
+          "oxide_parse [scraper]",
+          "bs4 + html.parser",
+          "oxide_parse [lite]"
+        ],
+        [
+          "parsel",
+          "oxide_parse [stream]",
+          "bs4 + html.parser",
+          "oxide_parse [lite]",
+          "selectolax",
+          "bs4 + lxml",
+          "oxide_parse [scraper]"
+        ],
+        [
+          "bs4 + lxml",
+          "oxide_parse [scraper]",
+          "parsel",
+          "selectolax",
+          "bs4 + html.parser",
+          "oxide_parse [stream]",
+          "oxide_parse [lite]"
+        ],
+        [
+          "selectolax",
+          "parsel",
+          "oxide_parse [stream]",
+          "bs4 + lxml",
+          "oxide_parse [scraper]",
+          "oxide_parse [lite]",
+          "bs4 + html.parser"
+        ]
+      ],
+      "results": {
+        "oxide_parse [scraper]": {
+          "samples_ms": [
+            23.7428,
+            27.1712,
+            25.5961,
+            22.0626,
+            44.2235,
+            27.4496,
+            26.1568
+          ],
+          "median_ms": 26.1568,
+          "min_ms": 22.0626,
+          "max_ms": 44.2235
+        },
+        "oxide_parse [lite]": {
+          "samples_ms": [
+            11.4874,
+            10.129,
+            16.9451,
+            9.9247,
+            8.3443,
+            8.4799,
+            9.5732
+          ],
+          "median_ms": 9.9247,
+          "min_ms": 8.3443,
+          "max_ms": 16.9451
+        },
+        "oxide_parse [stream]": {
+          "samples_ms": [
+            10.7086,
+            6.6537,
+            5.9981,
+            5.6392,
+            16.6,
+            8.8451,
+            6.2606
+          ],
+          "median_ms": 6.6537,
+          "min_ms": 5.6392,
+          "max_ms": 16.6
+        },
+        "bs4 + html.parser": {
+          "samples_ms": [
+            657.3872,
+            546.0048,
+            625.4882,
+            534.8104,
+            571.9781,
+            794.7986,
+            778.1744
+          ],
+          "median_ms": 625.4882,
+          "min_ms": 534.8104,
+          "max_ms": 794.7986
+        },
+        "bs4 + lxml": {
+          "samples_ms": [
+            590.0354,
+            713.1863,
+            555.1573,
+            480.2314,
+            2340.1006,
+            901.8801,
+            568.5173
+          ],
+          "median_ms": 590.0354,
+          "min_ms": 480.2314,
+          "max_ms": 2340.1006
+        },
+        "parsel": {
+          "samples_ms": [
+            259.8029,
+            215.1833,
+            269.2108,
+            178.0279,
+            249.2543,
+            388.0907,
+            315.9529
+          ],
+          "median_ms": 259.8029,
+          "min_ms": 178.0279,
+          "max_ms": 388.0907
+        },
+        "selectolax": {
+          "samples_ms": [
+            58.9843,
+            46.3079,
+            39.2521,
+            39.6181,
+            174.5555,
+            150.6397,
+            77.4551
+          ],
+          "median_ms": 58.9843,
+          "min_ms": 39.2521,
+          "max_ms": 174.5555
+        }
+      }
+    },
+    {
+      "products": 1000,
+      "noise": true,
+      "bytes": 312401,
+      "orders": [
+        [
+          "parsel",
+          "oxide_parse [stream]",
+          "bs4 + html.parser",
+          "oxide_parse [lite]",
+          "bs4 + lxml",
+          "selectolax",
+          "oxide_parse [scraper]"
+        ],
+        [
+          "bs4 + lxml",
+          "oxide_parse [stream]",
+          "oxide_parse [lite]",
+          "bs4 + html.parser",
+          "selectolax",
+          "oxide_parse [scraper]",
+          "parsel"
+        ],
+        [
+          "bs4 + html.parser",
+          "oxide_parse [lite]",
+          "parsel",
+          "selectolax",
+          "oxide_parse [stream]",
+          "bs4 + lxml",
+          "oxide_parse [scraper]"
+        ],
+        [
+          "parsel",
+          "selectolax",
+          "oxide_parse [stream]",
+          "bs4 + lxml",
+          "oxide_parse [scraper]",
+          "oxide_parse [lite]",
+          "bs4 + html.parser"
+        ],
+        [
+          "oxide_parse [lite]",
+          "oxide_parse [scraper]",
+          "selectolax",
+          "parsel",
+          "bs4 + lxml",
+          "bs4 + html.parser",
+          "oxide_parse [stream]"
+        ],
+        [
+          "parsel",
+          "bs4 + html.parser",
+          "oxide_parse [lite]",
+          "oxide_parse [scraper]",
+          "oxide_parse [stream]",
+          "bs4 + lxml",
+          "selectolax"
+        ],
+        [
+          "selectolax",
+          "oxide_parse [lite]",
+          "bs4 + lxml",
+          "bs4 + html.parser",
+          "parsel",
+          "oxide_parse [stream]",
+          "oxide_parse [scraper]"
+        ]
+      ],
+      "results": {
+        "oxide_parse [scraper]": {
+          "samples_ms": [
+            31.585,
+            90.0845,
+            61.5878,
+            95.7649,
+            35.5289,
+            29.8524,
+            34.5696
+          ],
+          "median_ms": 35.5289,
+          "min_ms": 29.8524,
+          "max_ms": 95.7649
+        },
+        "oxide_parse [lite]": {
+          "samples_ms": [
+            11.1752,
+            14.0542,
+            10.2589,
+            26.1632,
+            10.1519,
+            24.0267,
+            10.2312
+          ],
+          "median_ms": 11.1752,
+          "min_ms": 10.1519,
+          "max_ms": 26.1632
+        },
+        "oxide_parse [stream]": {
+          "samples_ms": [
+            10.4661,
+            8.4247,
+            7.2181,
+            9.6321,
+            8.3979,
+            6.7241,
+            9.7563
+          ],
+          "median_ms": 8.4247,
+          "min_ms": 6.7241,
+          "max_ms": 10.4661
+        },
+        "bs4 + html.parser": {
+          "samples_ms": [
+            1118.8512,
+            983.261,
+            1918.9295,
+            1071.0996,
+            1106.6592,
+            1318.8399,
+            2620.0975
+          ],
+          "median_ms": 1118.8512,
+          "min_ms": 983.261,
+          "max_ms": 2620.0975
+        },
+        "bs4 + lxml": {
+          "samples_ms": [
+            877.0748,
+            800.7379,
+            791.9938,
+            1393.6903,
+            867.7107,
+            924.3151,
+            1363.2699
+          ],
+          "median_ms": 877.0748,
+          "min_ms": 791.9938,
+          "max_ms": 1393.6903
+        },
+        "parsel": {
+          "samples_ms": [
+            282.0842,
+            190.1042,
+            227.895,
+            324.1415,
+            257.991,
+            202.3853,
+            668.0864
+          ],
+          "median_ms": 257.991,
+          "min_ms": 190.1042,
+          "max_ms": 668.0864
+        },
+        "selectolax": {
+          "samples_ms": [
+            50.0762,
+            84.2121,
+            75.8433,
+            47.4426,
+            58.195,
+            51.5054,
+            44.5091
+          ],
+          "median_ms": 51.5054,
+          "min_ms": 44.5091,
+          "max_ms": 84.2121
+        }
+      }
+    },
+    {
+      "products": 10000,
+      "noise": false,
+      "bytes": 2063421,
+      "orders": [
+        [
+          "parsel",
+          "bs4 + lxml",
+          "bs4 + html.parser",
+          "oxide_parse [stream]",
+          "selectolax",
+          "oxide_parse [scraper]",
+          "oxide_parse [lite]"
+        ],
+        [
+          "oxide_parse [lite]",
+          "bs4 + lxml",
+          "selectolax",
+          "bs4 + html.parser",
+          "oxide_parse [scraper]",
+          "oxide_parse [stream]",
+          "parsel"
+        ],
+        [
+          "oxide_parse [scraper]",
+          "bs4 + lxml",
+          "bs4 + html.parser",
+          "oxide_parse [lite]",
+          "selectolax",
+          "parsel",
+          "oxide_parse [stream]"
+        ],
+        [
+          "oxide_parse [lite]",
+          "selectolax",
+          "oxide_parse [scraper]",
+          "oxide_parse [stream]",
+          "bs4 + lxml",
+          "bs4 + html.parser",
+          "parsel"
+        ],
+        [
+          "selectolax",
+          "oxide_parse [stream]",
+          "parsel",
+          "oxide_parse [lite]",
+          "bs4 + lxml",
+          "oxide_parse [scraper]",
+          "bs4 + html.parser"
+        ],
+        [
+          "oxide_parse [stream]",
+          "bs4 + html.parser",
+          "parsel",
+          "bs4 + lxml",
+          "selectolax",
+          "oxide_parse [lite]",
+          "oxide_parse [scraper]"
+        ],
+        [
+          "bs4 + lxml",
+          "parsel",
+          "oxide_parse [stream]",
+          "bs4 + html.parser",
+          "oxide_parse [lite]",
+          "oxide_parse [scraper]",
+          "selectolax"
+        ]
+      ],
+      "results": {
+        "oxide_parse [scraper]": {
+          "samples_ms": [
+            267.4049,
+            244.3309,
+            282.5259,
+            295.0965,
+            244.7897,
+            193.6085,
+            161.3978
+          ],
+          "median_ms": 244.7897,
+          "min_ms": 161.3978,
+          "max_ms": 295.0965
+        },
+        "oxide_parse [lite]": {
+          "samples_ms": [
+            136.2942,
+            186.4559,
+            110.2185,
+            143.6147,
+            70.458,
+            82.3741,
+            62.2319
+          ],
+          "median_ms": 110.2185,
+          "min_ms": 62.2319,
+          "max_ms": 186.4559
+        },
+        "oxide_parse [stream]": {
+          "samples_ms": [
+            77.318,
+            68.1853,
+            90.1102,
+            82.4482,
+            50.088,
+            64.8105,
+            77.3091
+          ],
+          "median_ms": 77.3091,
+          "min_ms": 50.088,
+          "max_ms": 90.1102
+        },
+        "bs4 + html.parser": {
+          "samples_ms": [
+            7651.2737,
+            6783.5438,
+            6820.2865,
+            6603.1834,
+            6443.6851,
+            5140.8091,
+            5441.9677
+          ],
+          "median_ms": 6603.1834,
+          "min_ms": 5140.8091,
+          "max_ms": 7651.2737
+        },
+        "bs4 + lxml": {
+          "samples_ms": [
+            7245.353,
+            6622.7722,
+            5897.1766,
+            6009.0295,
+            5767.4341,
+            5241.1485,
+            4314.5645
+          ],
+          "median_ms": 5897.1766,
+          "min_ms": 4314.5645,
+          "max_ms": 7245.353
+        },
+        "parsel": {
+          "samples_ms": [
+            2768.6671,
+            2421.7011,
+            2738.4192,
+            1893.4352,
+            1830.9401,
+            2081.9981,
+            1790.9223
+          ],
+          "median_ms": 2081.9981,
+          "min_ms": 1790.9223,
+          "max_ms": 2768.6671
+        },
+        "selectolax": {
+          "samples_ms": [
+            465.7741,
+            584.0076,
+            502.4675,
+            568.3507,
+            399.9599,
+            450.4424,
+            368.6715
+          ],
+          "median_ms": 465.7741,
+          "min_ms": 368.6715,
+          "max_ms": 584.0076
+        }
+      }
+    },
+    {
+      "products": 10000,
+      "noise": true,
+      "bytes": 3163421,
+      "orders": [
+        [
+          "oxide_parse [stream]",
+          "bs4 + lxml",
+          "parsel",
+          "selectolax",
+          "oxide_parse [lite]",
+          "oxide_parse [scraper]",
+          "bs4 + html.parser"
+        ],
+        [
+          "oxide_parse [stream]",
+          "parsel",
+          "oxide_parse [lite]",
+          "oxide_parse [scraper]",
+          "bs4 + lxml",
+          "bs4 + html.parser",
+          "selectolax"
+        ],
+        [
+          "oxide_parse [scraper]",
+          "oxide_parse [lite]",
+          "oxide_parse [stream]",
+          "bs4 + lxml",
+          "bs4 + html.parser",
+          "selectolax",
+          "parsel"
+        ],
+        [
+          "selectolax",
+          "parsel",
+          "oxide_parse [stream]",
+          "bs4 + lxml",
+          "oxide_parse [lite]",
+          "oxide_parse [scraper]",
+          "bs4 + html.parser"
+        ],
+        [
+          "bs4 + html.parser",
+          "selectolax",
+          "parsel",
+          "oxide_parse [lite]",
+          "oxide_parse [stream]",
+          "oxide_parse [scraper]",
+          "bs4 + lxml"
+        ],
+        [
+          "bs4 + lxml",
+          "selectolax",
+          "oxide_parse [lite]",
+          "oxide_parse [stream]",
+          "bs4 + html.parser",
+          "oxide_parse [scraper]",
+          "parsel"
+        ],
+        [
+          "bs4 + lxml",
+          "selectolax",
+          "oxide_parse [lite]",
+          "oxide_parse [scraper]",
+          "bs4 + html.parser",
+          "oxide_parse [stream]",
+          "parsel"
+        ]
+      ],
+      "results": {
+        "oxide_parse [scraper]": {
+          "samples_ms": [
+            287.5754,
+            220.5976,
+            239.6901,
+            279.2808,
+            306.3296,
+            266.9233,
+            209.2723
+          ],
+          "median_ms": 266.9233,
+          "min_ms": 209.2723,
+          "max_ms": 306.3296
+        },
+        "oxide_parse [lite]": {
+          "samples_ms": [
+            75.671,
+            102.0801,
+            75.1776,
+            102.4771,
+            92.0438,
+            86.3112,
+            70.2505
+          ],
+          "median_ms": 86.3112,
+          "min_ms": 70.2505,
+          "max_ms": 102.4771
+        },
+        "oxide_parse [stream]": {
+          "samples_ms": [
+            61.6632,
+            53.5033,
+            71.9893,
+            56.2046,
+            66.3504,
+            61.6393,
+            100.5221
+          ],
+          "median_ms": 61.6632,
+          "min_ms": 53.5033,
+          "max_ms": 100.5221
+        },
+        "bs4 + html.parser": {
+          "samples_ms": [
+            6919.0171,
+            6811.8095,
+            8211.5586,
+            7338.3208,
+            7766.8482,
+            7381.4333,
+            7920.7036
+          ],
+          "median_ms": 7381.4333,
+          "min_ms": 6811.8095,
+          "max_ms": 8211.5586
+        },
+        "bs4 + lxml": {
+          "samples_ms": [
+            6144.083,
+            5680.9639,
+            7182.3549,
+            6743.117,
+            6378.9789,
+            6735.0286,
+            6461.7182
+          ],
+          "median_ms": 6461.7182,
+          "min_ms": 5680.9639,
+          "max_ms": 7182.3549
+        },
+        "parsel": {
+          "samples_ms": [
+            1691.071,
+            1485.1886,
+            1662.5395,
+            1781.6807,
+            2145.7978,
+            1744.5842,
+            1786.9809
+          ],
+          "median_ms": 1744.5842,
+          "min_ms": 1485.1886,
+          "max_ms": 2145.7978
+        },
+        "selectolax": {
+          "samples_ms": [
+            363.0475,
+            324.1646,
+            377.9086,
+            414.9436,
+            475.2039,
+            406.7407,
+            340.1248
+          ],
+          "median_ms": 377.9086,
+          "min_ms": 324.1646,
+          "max_ms": 475.2039
+        }
+      }
+    }
+  ],
+  "updated_utc": "2026-11-10T10:02:25.833010+00:00",
+  "hardware": {
+    "cpu": {
+      "Name": "Intel(R) N97",
+      "NumberOfCores": 4,
+      "NumberOfLogicalProcessors": 4
+    },
+    "memory": {
+      "TotalPhysicalMemory": 16912232448
+    }
+  }
+}

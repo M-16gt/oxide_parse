@@ -1,0 +1,4606 @@
+{
+  "started_utc": "2026-11-10T20:30:18.548160+00:00",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+  "repeat": 7,
+  "cooldown_seconds": 0.25,
+  "seed": 20261110,
+  "warmups": 1,
+  "workers": {
+    "v6": {
+      "package": "./.migration\\bench-v6\\oxide_parse",
+      "native_sha256": "ce843d351d0d32a400b2447ffad7a008ded06a621b4a445bfc6d9ac9148bb794",
+      "files_sha256": {
+        "decompile.py": "f78cef997859742fc7f76d250481ec64b821b03c477db8357cb74892341cc585",
+        "expr.py": "2e00e9acb61b4af9196de2cd1ea967bf82dfecbb572431b40446ece2e46ef690",
+        "plan.py": "63b9e05fbbd3c2b71078fc61c1ab86c86eba0bb415551c166e2c2f9d3e736d9d",
+        "py.typed": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "_core.pdb": "fe9e968cf23628c5bb6f16c750682cbaa0764991667ce784d93b4dc2bf6475cb",
+        "_core.pyd": "ce843d351d0d32a400b2447ffad7a008ded06a621b4a445bfc6d9ac9148bb794",
+        "_core.pyi": "4cb746d868da58bc6d659dfb8878f51ac8b52fb6631e597bfd828e3eeed1fd60",
+        "__init__.py": "8013fd28fb312e298cb4e3a44764bf230bd4b6b84f8e01b2846f127785fcc0e6"
+      },
+      "engines": [
+        "scraper",
+        "lite",
+        "stream",
+        "json"
+      ]
+    },
+    "v7": {
+      "package": "./.migration\\bench-v7\\oxide_parse",
+      "native_sha256": "3f9dafe4c83c6baa803dd7c48d456df9da483019dc387603cbc7645f239fe483",
+      "files_sha256": {
+        "decompile.py": "f78cef997859742fc7f76d250481ec64b821b03c477db8357cb74892341cc585",
+        "expr.py": "cfd966660219ca7266ea9398afaea81b79756aea1565eb4ebc4f746475f5741a",
+        "plan.py": "63b9e05fbbd3c2b71078fc61c1ab86c86eba0bb415551c166e2c2f9d3e736d9d",
+        "py.typed": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "_core.pdb": "fe9e968cf23628c5bb6f16c750682cbaa0764991667ce784d93b4dc2bf6475cb",
+        "_core.pyd": "3f9dafe4c83c6baa803dd7c48d456df9da483019dc387603cbc7645f239fe483",
+        "_core.pyi": "4cb746d868da58bc6d659dfb8878f51ac8b52fb6631e597bfd828e3eeed1fd60",
+        "__init__.py": "8013fd28fb312e298cb4e3a44764bf230bd4b6b84f8e01b2846f127785fcc0e6"
+      },
+      "engines": [
+        "scraper",
+        "lite",
+        "stream",
+        "json"
+      ]
+    }
+  },
+  "samples": [
+    {
+      "round": 1,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "selectolax",
+      "ms": 2.4448
+    },
+    {
+      "round": 1,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "bs4 + lxml",
+      "ms": 33.0892
+    },
+    {
+      "round": 1,
+      "products": 100,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [lite]",
+      "ms": 0.6127
+    },
+    {
+      "round": 1,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [lite]",
+      "ms": 0.5314
+    },
+    {
+      "round": 1,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "bs4 + html.parser",
+      "ms": 60.0075
+    },
+    {
+      "round": 1,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "parsel",
+      "ms": 14.9881
+    },
+    {
+      "round": 1,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [stream]",
+      "ms": 0.5059
+    },
+    {
+      "round": 1,
+      "products": 100,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [stream]",
+      "ms": 0.4467
+    },
+    {
+      "round": 1,
+      "products": 100,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [scraper]",
+      "ms": 1.2162
+    },
+    {
+      "round": 1,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [scraper]",
+      "ms": 1.2036
+    },
+    {
+      "round": 1,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [stream]",
+      "ms": 40.3618
+    },
+    {
+      "round": 1,
+      "products": 10000,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [stream]",
+      "ms": 42.9126
+    },
+    {
+      "round": 1,
+      "products": 10000,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [lite]",
+      "ms": 62.5481
+    },
+    {
+      "round": 1,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [lite]",
+      "ms": 65.838
+    },
+    {
+      "round": 1,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [scraper]",
+      "ms": 186.5803
+    },
+    {
+      "round": 1,
+      "products": 10000,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [scraper]",
+      "ms": 4607.2408
+    },
+    {
+      "round": 1,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "bs4 + html.parser",
+      "ms": 5714.4926
+    },
+    {
+      "round": 1,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "selectolax",
+      "ms": 338.7714
+    },
+    {
+      "round": 1,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "parsel",
+      "ms": 1605.4074
+    },
+    {
+      "round": 1,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "bs4 + lxml",
+      "ms": 4192.5105
+    },
+    {
+      "round": 1,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "parsel",
+      "ms": 2597.4668
+    },
+    {
+      "round": 1,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [lite]",
+      "ms": 96.2017
+    },
+    {
+      "round": 1,
+      "products": 10000,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [lite]",
+      "ms": 104.7146
+    },
+    {
+      "round": 1,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "selectolax",
+      "ms": 658.9717
+    },
+    {
+      "round": 1,
+      "products": 10000,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [scraper]",
+      "ms": 830.3718
+    },
+    {
+      "round": 1,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [scraper]",
+      "ms": 272.6903
+    },
+    {
+      "round": 1,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "bs4 + lxml",
+      "ms": 6231.3428
+    },
+    {
+      "round": 1,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "bs4 + html.parser",
+      "ms": 7504.3031
+    },
+    {
+      "round": 1,
+      "products": 10000,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [stream]",
+      "ms": 51.3013
+    },
+    {
+      "round": 1,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [stream]",
+      "ms": 53.4354
+    },
+    {
+      "round": 1,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "parsel",
+      "ms": 134.3265
+    },
+    {
+      "round": 1,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "bs4 + lxml",
+      "ms": 627.0216
+    },
+    {
+      "round": 1,
+      "products": 1000,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [scraper]",
+      "ms": 35.1643
+    },
+    {
+      "round": 1,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [scraper]",
+      "ms": 30.5171
+    },
+    {
+      "round": 1,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "selectolax",
+      "ms": 29.8563
+    },
+    {
+      "round": 1,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [stream]",
+      "ms": 5.3315
+    },
+    {
+      "round": 1,
+      "products": 1000,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [stream]",
+      "ms": 6.2394
+    },
+    {
+      "round": 1,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "bs4 + html.parser",
+      "ms": 749.8349
+    },
+    {
+      "round": 1,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [lite]",
+      "ms": 14.8401
+    },
+    {
+      "round": 1,
+      "products": 1000,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [lite]",
+      "ms": 9.6756
+    },
+    {
+      "round": 1,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "bs4 + html.parser",
+      "ms": 79.4044
+    },
+    {
+      "round": 1,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [scraper]",
+      "ms": 3.0678
+    },
+    {
+      "round": 1,
+      "products": 100,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [scraper]",
+      "ms": 6.2074
+    },
+    {
+      "round": 1,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [lite]",
+      "ms": 1.1878
+    },
+    {
+      "round": 1,
+      "products": 100,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [lite]",
+      "ms": 0.9288
+    },
+    {
+      "round": 1,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "bs4 + lxml",
+      "ms": 118.0462
+    },
+    {
+      "round": 1,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "selectolax",
+      "ms": 4.1026
+    },
+    {
+      "round": 1,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "parsel",
+      "ms": 22.025
+    },
+    {
+      "round": 1,
+      "products": 100,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [stream]",
+      "ms": 0.7348
+    },
+    {
+      "round": 1,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [stream]",
+      "ms": 0.7201
+    },
+    {
+      "round": 1,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "bs4 + html.parser",
+      "ms": 2183.8142
+    },
+    {
+      "round": 1,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [lite]",
+      "ms": 8.9593
+    },
+    {
+      "round": 1,
+      "products": 1000,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [lite]",
+      "ms": 7.2921
+    },
+    {
+      "round": 1,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "parsel",
+      "ms": 260.2682
+    },
+    {
+      "round": 1,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "selectolax",
+      "ms": 43.7351
+    },
+    {
+      "round": 1,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "bs4 + lxml",
+      "ms": 1241.3005
+    },
+    {
+      "round": 1,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [stream]",
+      "ms": 6.1438
+    },
+    {
+      "round": 1,
+      "products": 1000,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [stream]",
+      "ms": 6.2446
+    },
+    {
+      "round": 1,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [scraper]",
+      "ms": 17.8318
+    },
+    {
+      "round": 1,
+      "products": 1000,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [scraper]",
+      "ms": 20.3093
+    },
+    {
+      "round": 2,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "bs4 + html.parser",
+      "ms": 3824.5942
+    },
+    {
+      "round": 2,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "bs4 + lxml",
+      "ms": 1300.2915
+    },
+    {
+      "round": 2,
+      "products": 1000,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [scraper]",
+      "ms": 31.4451
+    },
+    {
+      "round": 2,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [scraper]",
+      "ms": 73.9039
+    },
+    {
+      "round": 2,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "parsel",
+      "ms": 293.2446
+    },
+    {
+      "round": 2,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [stream]",
+      "ms": 7.5638
+    },
+    {
+      "round": 2,
+      "products": 1000,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [stream]",
+      "ms": 9.1793
+    },
+    {
+      "round": 2,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "selectolax",
+      "ms": 48.8454
+    },
+    {
+      "round": 2,
+      "products": 1000,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [lite]",
+      "ms": 13.0373
+    },
+    {
+      "round": 2,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [lite]",
+      "ms": 8.2176
+    },
+    {
+      "round": 2,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "bs4 + lxml",
+      "ms": 82.4848
+    },
+    {
+      "round": 2,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "bs4 + html.parser",
+      "ms": 78.9482
+    },
+    {
+      "round": 2,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "parsel",
+      "ms": 18.0651
+    },
+    {
+      "round": 2,
+      "products": 100,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [scraper]",
+      "ms": 2.9721
+    },
+    {
+      "round": 2,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [scraper]",
+      "ms": 2.4953
+    },
+    {
+      "round": 2,
+      "products": 100,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [lite]",
+      "ms": 0.9647
+    },
+    {
+      "round": 2,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [lite]",
+      "ms": 0.7007
+    },
+    {
+      "round": 2,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "selectolax",
+      "ms": 4.2863
+    },
+    {
+      "round": 2,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [stream]",
+      "ms": 0.7444
+    },
+    {
+      "round": 2,
+      "products": 100,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [stream]",
+      "ms": 0.7515
+    },
+    {
+      "round": 2,
+      "products": 10000,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [stream]",
+      "ms": 117.8153
+    },
+    {
+      "round": 2,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [stream]",
+      "ms": 64.4885
+    },
+    {
+      "round": 2,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "bs4 + lxml",
+      "ms": 6474.6971
+    },
+    {
+      "round": 2,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "selectolax",
+      "ms": 329.449
+    },
+    {
+      "round": 2,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [lite]",
+      "ms": 64.9247
+    },
+    {
+      "round": 2,
+      "products": 10000,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [lite]",
+      "ms": 94.5394
+    },
+    {
+      "round": 2,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [scraper]",
+      "ms": 209.4859
+    },
+    {
+      "round": 2,
+      "products": 10000,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [scraper]",
+      "ms": 260.2645
+    },
+    {
+      "round": 2,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "parsel",
+      "ms": 2006.8472
+    },
+    {
+      "round": 2,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "bs4 + html.parser",
+      "ms": 6467.6871
+    },
+    {
+      "round": 2,
+      "products": 100,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [stream]",
+      "ms": 1.0741
+    },
+    {
+      "round": 2,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [stream]",
+      "ms": 0.4754
+    },
+    {
+      "round": 2,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [scraper]",
+      "ms": 2.3563
+    },
+    {
+      "round": 2,
+      "products": 100,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [scraper]",
+      "ms": 1.9642
+    },
+    {
+      "round": 2,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "bs4 + lxml",
+      "ms": 35.5347
+    },
+    {
+      "round": 2,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "parsel",
+      "ms": 16.7062
+    },
+    {
+      "round": 2,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "bs4 + html.parser",
+      "ms": 38.3592
+    },
+    {
+      "round": 2,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "selectolax",
+      "ms": 2.6412
+    },
+    {
+      "round": 2,
+      "products": 100,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [lite]",
+      "ms": 0.6897
+    },
+    {
+      "round": 2,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [lite]",
+      "ms": 0.6785
+    },
+    {
+      "round": 2,
+      "products": 1000,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [scraper]",
+      "ms": 18.0865
+    },
+    {
+      "round": 2,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [scraper]",
+      "ms": 18.6741
+    },
+    {
+      "round": 2,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "selectolax",
+      "ms": 27.1408
+    },
+    {
+      "round": 2,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [lite]",
+      "ms": 7.2459
+    },
+    {
+      "round": 2,
+      "products": 1000,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [lite]",
+      "ms": 9.2846
+    },
+    {
+      "round": 2,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "bs4 + html.parser",
+      "ms": 427.7828
+    },
+    {
+      "round": 2,
+      "products": 1000,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [stream]",
+      "ms": 3.6826
+    },
+    {
+      "round": 2,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [stream]",
+      "ms": 3.3984
+    },
+    {
+      "round": 2,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "bs4 + lxml",
+      "ms": 376.9407
+    },
+    {
+      "round": 2,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "parsel",
+      "ms": 141.0296
+    },
+    {
+      "round": 2,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [stream]",
+      "ms": 50.1289
+    },
+    {
+      "round": 2,
+      "products": 10000,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [stream]",
+      "ms": 47.7501
+    },
+    {
+      "round": 2,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "parsel",
+      "ms": 1917.7251
+    },
+    {
+      "round": 2,
+      "products": 10000,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [scraper]",
+      "ms": 144.7004
+    },
+    {
+      "round": 2,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [scraper]",
+      "ms": 148.636
+    },
+    {
+      "round": 2,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "selectolax",
+      "ms": 286.6598
+    },
+    {
+      "round": 2,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "bs4 + lxml",
+      "ms": 3703.5355
+    },
+    {
+      "round": 2,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "bs4 + html.parser",
+      "ms": 4405.1378
+    },
+    {
+      "round": 2,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [lite]",
+      "ms": 64.3879
+    },
+    {
+      "round": 2,
+      "products": 10000,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [lite]",
+      "ms": 66.4162
+    },
+    {
+      "round": 3,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "selectolax",
+      "ms": 29.6181
+    },
+    {
+      "round": 3,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "parsel",
+      "ms": 159.0175
+    },
+    {
+      "round": 3,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [scraper]",
+      "ms": 12.3667
+    },
+    {
+      "round": 3,
+      "products": 1000,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [scraper]",
+      "ms": 14.9247
+    },
+    {
+      "round": 3,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [lite]",
+      "ms": 6.5268
+    },
+    {
+      "round": 3,
+      "products": 1000,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [lite]",
+      "ms": 8.4836
+    },
+    {
+      "round": 3,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "bs4 + lxml",
+      "ms": 580.6238
+    },
+    {
+      "round": 3,
+      "products": 1000,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [stream]",
+      "ms": 4.4083
+    },
+    {
+      "round": 3,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [stream]",
+      "ms": 4.5564
+    },
+    {
+      "round": 3,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "bs4 + html.parser",
+      "ms": 444.2206
+    },
+    {
+      "round": 3,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "parsel",
+      "ms": 2046.6806
+    },
+    {
+      "round": 3,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "bs4 + lxml",
+      "ms": 6037.0214
+    },
+    {
+      "round": 3,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [scraper]",
+      "ms": 248.7441
+    },
+    {
+      "round": 3,
+      "products": 10000,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [scraper]",
+      "ms": 261.9226
+    },
+    {
+      "round": 3,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "selectolax",
+      "ms": 331.6056
+    },
+    {
+      "round": 3,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [stream]",
+      "ms": 87.4372
+    },
+    {
+      "round": 3,
+      "products": 10000,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [stream]",
+      "ms": 53.0315
+    },
+    {
+      "round": 3,
+      "products": 10000,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [lite]",
+      "ms": 70.7594
+    },
+    {
+      "round": 3,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [lite]",
+      "ms": 76.7238
+    },
+    {
+      "round": 3,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "bs4 + html.parser",
+      "ms": 7249.8395
+    },
+    {
+      "round": 3,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "bs4 + html.parser",
+      "ms": 3776.8028
+    },
+    {
+      "round": 3,
+      "products": 10000,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [stream]",
+      "ms": 52.8742
+    },
+    {
+      "round": 3,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [stream]",
+      "ms": 41.1617
+    },
+    {
+      "round": 3,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "parsel",
+      "ms": 1324.8779
+    },
+    {
+      "round": 3,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "selectolax",
+      "ms": 266.743
+    },
+    {
+      "round": 3,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "bs4 + lxml",
+      "ms": 3912.1991
+    },
+    {
+      "round": 3,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [scraper]",
+      "ms": 165.903
+    },
+    {
+      "round": 3,
+      "products": 10000,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [scraper]",
+      "ms": 143.664
+    },
+    {
+      "round": 3,
+      "products": 10000,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [lite]",
+      "ms": 83.9827
+    },
+    {
+      "round": 3,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [lite]",
+      "ms": 59.7363
+    },
+    {
+      "round": 3,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "bs4 + lxml",
+      "ms": 50.4967
+    },
+    {
+      "round": 3,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "selectolax",
+      "ms": 5.2813
+    },
+    {
+      "round": 3,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "bs4 + html.parser",
+      "ms": 63.4381
+    },
+    {
+      "round": 3,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [stream]",
+      "ms": 0.74
+    },
+    {
+      "round": 3,
+      "products": 100,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [stream]",
+      "ms": 0.7091
+    },
+    {
+      "round": 3,
+      "products": 100,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [lite]",
+      "ms": 0.8419
+    },
+    {
+      "round": 3,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [lite]",
+      "ms": 0.7249
+    },
+    {
+      "round": 3,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "parsel",
+      "ms": 13.6845
+    },
+    {
+      "round": 3,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [scraper]",
+      "ms": 3.557
+    },
+    {
+      "round": 3,
+      "products": 100,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [scraper]",
+      "ms": 3.7051
+    },
+    {
+      "round": 3,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "bs4 + html.parser",
+      "ms": 611.0375
+    },
+    {
+      "round": 3,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "selectolax",
+      "ms": 40.0939
+    },
+    {
+      "round": 3,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "bs4 + lxml",
+      "ms": 663.0104
+    },
+    {
+      "round": 3,
+      "products": 1000,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [stream]",
+      "ms": 6.3527
+    },
+    {
+      "round": 3,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [stream]",
+      "ms": 5.1105
+    },
+    {
+      "round": 3,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "parsel",
+      "ms": 170.2238
+    },
+    {
+      "round": 3,
+      "products": 1000,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [scraper]",
+      "ms": 25.6556
+    },
+    {
+      "round": 3,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [scraper]",
+      "ms": 19.92
+    },
+    {
+      "round": 3,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [lite]",
+      "ms": 6.5915
+    },
+    {
+      "round": 3,
+      "products": 1000,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [lite]",
+      "ms": 10.3111
+    },
+    {
+      "round": 3,
+      "products": 100,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [scraper]",
+      "ms": 1.5762
+    },
+    {
+      "round": 3,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [scraper]",
+      "ms": 1.3651
+    },
+    {
+      "round": 3,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "bs4 + html.parser",
+      "ms": 39.8606
+    },
+    {
+      "round": 3,
+      "products": 100,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [stream]",
+      "ms": 0.4135
+    },
+    {
+      "round": 3,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [stream]",
+      "ms": 0.5207
+    },
+    {
+      "round": 3,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "bs4 + lxml",
+      "ms": 41.2859
+    },
+    {
+      "round": 3,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "parsel",
+      "ms": 16.0576
+    },
+    {
+      "round": 3,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "selectolax",
+      "ms": 4.7336
+    },
+    {
+      "round": 3,
+      "products": 100,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [lite]",
+      "ms": 0.7844
+    },
+    {
+      "round": 3,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [lite]",
+      "ms": 0.7425
+    },
+    {
+      "round": 4,
+      "products": 1000,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [scraper]",
+      "ms": 19.8091
+    },
+    {
+      "round": 4,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [scraper]",
+      "ms": 19.2372
+    },
+    {
+      "round": 4,
+      "products": 1000,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [lite]",
+      "ms": 7.0302
+    },
+    {
+      "round": 4,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [lite]",
+      "ms": 6.4132
+    },
+    {
+      "round": 4,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "parsel",
+      "ms": 301.7967
+    },
+    {
+      "round": 4,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [stream]",
+      "ms": 5.6888
+    },
+    {
+      "round": 4,
+      "products": 1000,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [stream]",
+      "ms": 6.3902
+    },
+    {
+      "round": 4,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "selectolax",
+      "ms": 38.5626
+    },
+    {
+      "round": 4,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "bs4 + lxml",
+      "ms": 339.5428
+    },
+    {
+      "round": 4,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "bs4 + html.parser",
+      "ms": 387.0571
+    },
+    {
+      "round": 4,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [stream]",
+      "ms": 0.5377
+    },
+    {
+      "round": 4,
+      "products": 100,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [stream]",
+      "ms": 0.6054
+    },
+    {
+      "round": 4,
+      "products": 100,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [scraper]",
+      "ms": 2.5376
+    },
+    {
+      "round": 4,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [scraper]",
+      "ms": 1.9812
+    },
+    {
+      "round": 4,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "bs4 + html.parser",
+      "ms": 113.8658
+    },
+    {
+      "round": 4,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "selectolax",
+      "ms": 5.6538
+    },
+    {
+      "round": 4,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "bs4 + lxml",
+      "ms": 74.8159
+    },
+    {
+      "round": 4,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "parsel",
+      "ms": 20.2721
+    },
+    {
+      "round": 4,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [lite]",
+      "ms": 1.2268
+    },
+    {
+      "round": 4,
+      "products": 100,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [lite]",
+      "ms": 0.84
+    },
+    {
+      "round": 4,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "bs4 + lxml",
+      "ms": 611.9492
+    },
+    {
+      "round": 4,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "bs4 + html.parser",
+      "ms": 774.9548
+    },
+    {
+      "round": 4,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "selectolax",
+      "ms": 32.8645
+    },
+    {
+      "round": 4,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [stream]",
+      "ms": 6.2134
+    },
+    {
+      "round": 4,
+      "products": 1000,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [stream]",
+      "ms": 5.6811
+    },
+    {
+      "round": 4,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [scraper]",
+      "ms": 19.9122
+    },
+    {
+      "round": 4,
+      "products": 1000,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [scraper]",
+      "ms": 28.2145
+    },
+    {
+      "round": 4,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [lite]",
+      "ms": 7.9504
+    },
+    {
+      "round": 4,
+      "products": 1000,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [lite]",
+      "ms": 6.4447
+    },
+    {
+      "round": 4,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "parsel",
+      "ms": 144.8001
+    },
+    {
+      "round": 4,
+      "products": 10000,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [lite]",
+      "ms": 71.5693
+    },
+    {
+      "round": 4,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [lite]",
+      "ms": 53.6306
+    },
+    {
+      "round": 4,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "bs4 + lxml",
+      "ms": 3625.4218
+    },
+    {
+      "round": 4,
+      "products": 10000,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [scraper]",
+      "ms": 174.9225
+    },
+    {
+      "round": 4,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [scraper]",
+      "ms": 244.576
+    },
+    {
+      "round": 4,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "selectolax",
+      "ms": 323.895
+    },
+    {
+      "round": 4,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [stream]",
+      "ms": 60.4079
+    },
+    {
+      "round": 4,
+      "products": 10000,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [stream]",
+      "ms": 41.2676
+    },
+    {
+      "round": 4,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "bs4 + html.parser",
+      "ms": 3896.3227
+    },
+    {
+      "round": 4,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "parsel",
+      "ms": 1486.9906
+    },
+    {
+      "round": 4,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "bs4 + html.parser",
+      "ms": 46.4203
+    },
+    {
+      "round": 4,
+      "products": 100,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [stream]",
+      "ms": 0.4365
+    },
+    {
+      "round": 4,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [stream]",
+      "ms": 0.448
+    },
+    {
+      "round": 4,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "selectolax",
+      "ms": 3.113
+    },
+    {
+      "round": 4,
+      "products": 100,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [lite]",
+      "ms": 0.6988
+    },
+    {
+      "round": 4,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [lite]",
+      "ms": 0.9772
+    },
+    {
+      "round": 4,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [scraper]",
+      "ms": 1.6572
+    },
+    {
+      "round": 4,
+      "products": 100,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [scraper]",
+      "ms": 1.4063
+    },
+    {
+      "round": 4,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "bs4 + lxml",
+      "ms": 44.04
+    },
+    {
+      "round": 4,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "parsel",
+      "ms": 13.2576
+    },
+    {
+      "round": 4,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "selectolax",
+      "ms": 361.0615
+    },
+    {
+      "round": 4,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [scraper]",
+      "ms": 219.0426
+    },
+    {
+      "round": 4,
+      "products": 10000,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [scraper]",
+      "ms": 310.1659
+    },
+    {
+      "round": 4,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "bs4 + lxml",
+      "ms": 6131.8922
+    },
+    {
+      "round": 4,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "parsel",
+      "ms": 1654.1264
+    },
+    {
+      "round": 4,
+      "products": 10000,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [stream]",
+      "ms": 62.5754
+    },
+    {
+      "round": 4,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [stream]",
+      "ms": 47.6655
+    },
+    {
+      "round": 4,
+      "products": 10000,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [lite]",
+      "ms": 74.338
+    },
+    {
+      "round": 4,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [lite]",
+      "ms": 68.24
+    },
+    {
+      "round": 4,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "bs4 + html.parser",
+      "ms": 8020.2067
+    },
+    {
+      "round": 5,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [lite]",
+      "ms": 7.293
+    },
+    {
+      "round": 5,
+      "products": 1000,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [lite]",
+      "ms": 9.4124
+    },
+    {
+      "round": 5,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "bs4 + lxml",
+      "ms": 636.1849
+    },
+    {
+      "round": 5,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "parsel",
+      "ms": 138.0984
+    },
+    {
+      "round": 5,
+      "products": 1000,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [stream]",
+      "ms": 7.1086
+    },
+    {
+      "round": 5,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [stream]",
+      "ms": 8.4006
+    },
+    {
+      "round": 5,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "bs4 + html.parser",
+      "ms": 590.0951
+    },
+    {
+      "round": 5,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [scraper]",
+      "ms": 24.6778
+    },
+    {
+      "round": 5,
+      "products": 1000,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [scraper]",
+      "ms": 22.08
+    },
+    {
+      "round": 5,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "selectolax",
+      "ms": 39.8538
+    },
+    {
+      "round": 5,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [scraper]",
+      "ms": 14.5998
+    },
+    {
+      "round": 5,
+      "products": 1000,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [scraper]",
+      "ms": 14.099
+    },
+    {
+      "round": 5,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "bs4 + html.parser",
+      "ms": 380.763
+    },
+    {
+      "round": 5,
+      "products": 1000,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [lite]",
+      "ms": 7.1472
+    },
+    {
+      "round": 5,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [lite]",
+      "ms": 6.3742
+    },
+    {
+      "round": 5,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "bs4 + lxml",
+      "ms": 357.4214
+    },
+    {
+      "round": 5,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [stream]",
+      "ms": 3.3842
+    },
+    {
+      "round": 5,
+      "products": 1000,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [stream]",
+      "ms": 5.2823
+    },
+    {
+      "round": 5,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "parsel",
+      "ms": 140.0767
+    },
+    {
+      "round": 5,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "selectolax",
+      "ms": 30.3319
+    },
+    {
+      "round": 5,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [scraper]",
+      "ms": 171.2189
+    },
+    {
+      "round": 5,
+      "products": 10000,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [scraper]",
+      "ms": 200.5492
+    },
+    {
+      "round": 5,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "bs4 + html.parser",
+      "ms": 3863.8006
+    },
+    {
+      "round": 5,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "bs4 + lxml",
+      "ms": 3725.1564
+    },
+    {
+      "round": 5,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "selectolax",
+      "ms": 282.6285
+    },
+    {
+      "round": 5,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "parsel",
+      "ms": 1315.7548
+    },
+    {
+      "round": 5,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [stream]",
+      "ms": 55.9071
+    },
+    {
+      "round": 5,
+      "products": 10000,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [stream]",
+      "ms": 76.5816
+    },
+    {
+      "round": 5,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [lite]",
+      "ms": 54.4638
+    },
+    {
+      "round": 5,
+      "products": 10000,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [lite]",
+      "ms": 64.7016
+    },
+    {
+      "round": 5,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [lite]",
+      "ms": 0.5882
+    },
+    {
+      "round": 5,
+      "products": 100,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [lite]",
+      "ms": 0.7614
+    },
+    {
+      "round": 5,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [stream]",
+      "ms": 0.388
+    },
+    {
+      "round": 5,
+      "products": 100,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [stream]",
+      "ms": 0.4283
+    },
+    {
+      "round": 5,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "selectolax",
+      "ms": 5.111
+    },
+    {
+      "round": 5,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "parsel",
+      "ms": 14.3063
+    },
+    {
+      "round": 5,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "bs4 + lxml",
+      "ms": 38.1007
+    },
+    {
+      "round": 5,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [scraper]",
+      "ms": 2.2664
+    },
+    {
+      "round": 5,
+      "products": 100,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [scraper]",
+      "ms": 1.8124
+    },
+    {
+      "round": 5,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "bs4 + html.parser",
+      "ms": 34.9822
+    },
+    {
+      "round": 5,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "parsel",
+      "ms": 16.1415
+    },
+    {
+      "round": 5,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "bs4 + html.parser",
+      "ms": 79.4713
+    },
+    {
+      "round": 5,
+      "products": 100,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [scraper]",
+      "ms": 4.706
+    },
+    {
+      "round": 5,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [scraper]",
+      "ms": 2.6605
+    },
+    {
+      "round": 5,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "selectolax",
+      "ms": 4.4035
+    },
+    {
+      "round": 5,
+      "products": 100,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [stream]",
+      "ms": 0.9684
+    },
+    {
+      "round": 5,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [stream]",
+      "ms": 0.6419
+    },
+    {
+      "round": 5,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "bs4 + lxml",
+      "ms": 51.4107
+    },
+    {
+      "round": 5,
+      "products": 100,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [lite]",
+      "ms": 0.9655
+    },
+    {
+      "round": 5,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [lite]",
+      "ms": 0.8003
+    },
+    {
+      "round": 5,
+      "products": 10000,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [lite]",
+      "ms": 70.1828
+    },
+    {
+      "round": 5,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [lite]",
+      "ms": 79.774
+    },
+    {
+      "round": 5,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "selectolax",
+      "ms": 363.6735
+    },
+    {
+      "round": 5,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "bs4 + lxml",
+      "ms": 7144.0968
+    },
+    {
+      "round": 5,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "parsel",
+      "ms": 2014.8003
+    },
+    {
+      "round": 5,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [scraper]",
+      "ms": 281.7444
+    },
+    {
+      "round": 5,
+      "products": 10000,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [scraper]",
+      "ms": 277.2655
+    },
+    {
+      "round": 5,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "bs4 + html.parser",
+      "ms": 7715.6637
+    },
+    {
+      "round": 5,
+      "products": 10000,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [stream]",
+      "ms": 53.7913
+    },
+    {
+      "round": 5,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [stream]",
+      "ms": 49.2375
+    },
+    {
+      "round": 6,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [scraper]",
+      "ms": 2.2627
+    },
+    {
+      "round": 6,
+      "products": 100,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [scraper]",
+      "ms": 2.5755
+    },
+    {
+      "round": 6,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "selectolax",
+      "ms": 4.4725
+    },
+    {
+      "round": 6,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [stream]",
+      "ms": 0.7621
+    },
+    {
+      "round": 6,
+      "products": 100,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [stream]",
+      "ms": 1.0062
+    },
+    {
+      "round": 6,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "bs4 + lxml",
+      "ms": 69.736
+    },
+    {
+      "round": 6,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [lite]",
+      "ms": 0.8857
+    },
+    {
+      "round": 6,
+      "products": 100,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [lite]",
+      "ms": 0.9228
+    },
+    {
+      "round": 6,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "parsel",
+      "ms": 19.9566
+    },
+    {
+      "round": 6,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "bs4 + html.parser",
+      "ms": 57.065
+    },
+    {
+      "round": 6,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [stream]",
+      "ms": 48.21
+    },
+    {
+      "round": 6,
+      "products": 10000,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [stream]",
+      "ms": 42.4196
+    },
+    {
+      "round": 6,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "bs4 + lxml",
+      "ms": 3455.8516
+    },
+    {
+      "round": 6,
+      "products": 10000,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [scraper]",
+      "ms": 162.8833
+    },
+    {
+      "round": 6,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [scraper]",
+      "ms": 129.6303
+    },
+    {
+      "round": 6,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "bs4 + html.parser",
+      "ms": 3647.5813
+    },
+    {
+      "round": 6,
+      "products": 10000,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [lite]",
+      "ms": 57.4432
+    },
+    {
+      "round": 6,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [lite]",
+      "ms": 81.1108
+    },
+    {
+      "round": 6,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "parsel",
+      "ms": 1335.3122
+    },
+    {
+      "round": 6,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "selectolax",
+      "ms": 322.1204
+    },
+    {
+      "round": 6,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "selectolax",
+      "ms": 3.1556
+    },
+    {
+      "round": 6,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "bs4 + html.parser",
+      "ms": 37.5055
+    },
+    {
+      "round": 6,
+      "products": 100,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [stream]",
+      "ms": 0.5312
+    },
+    {
+      "round": 6,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [stream]",
+      "ms": 0.4391
+    },
+    {
+      "round": 6,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [lite]",
+      "ms": 0.6952
+    },
+    {
+      "round": 6,
+      "products": 100,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [lite]",
+      "ms": 0.7308
+    },
+    {
+      "round": 6,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "parsel",
+      "ms": 15.456
+    },
+    {
+      "round": 6,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [scraper]",
+      "ms": 1.97
+    },
+    {
+      "round": 6,
+      "products": 100,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [scraper]",
+      "ms": 1.8729
+    },
+    {
+      "round": 6,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "bs4 + lxml",
+      "ms": 32.1269
+    },
+    {
+      "round": 6,
+      "products": 10000,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [scraper]",
+      "ms": 232.8804
+    },
+    {
+      "round": 6,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [scraper]",
+      "ms": 307.0434
+    },
+    {
+      "round": 6,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "parsel",
+      "ms": 1578.9779
+    },
+    {
+      "round": 6,
+      "products": 10000,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [stream]",
+      "ms": 50.0864
+    },
+    {
+      "round": 6,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [stream]",
+      "ms": 49.4101
+    },
+    {
+      "round": 6,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "selectolax",
+      "ms": 340.7042
+    },
+    {
+      "round": 6,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "bs4 + lxml",
+      "ms": 5972.2472
+    },
+    {
+      "round": 6,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [lite]",
+      "ms": 76.2271
+    },
+    {
+      "round": 6,
+      "products": 10000,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [lite]",
+      "ms": 75.5532
+    },
+    {
+      "round": 6,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "bs4 + html.parser",
+      "ms": 7644.5698
+    },
+    {
+      "round": 6,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "bs4 + lxml",
+      "ms": 367.7092
+    },
+    {
+      "round": 6,
+      "products": 1000,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [scraper]",
+      "ms": 17.5023
+    },
+    {
+      "round": 6,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [scraper]",
+      "ms": 14.7851
+    },
+    {
+      "round": 6,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [stream]",
+      "ms": 4.5884
+    },
+    {
+      "round": 6,
+      "products": 1000,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [stream]",
+      "ms": 6.9162
+    },
+    {
+      "round": 6,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "bs4 + html.parser",
+      "ms": 492.6177
+    },
+    {
+      "round": 6,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "parsel",
+      "ms": 125.3619
+    },
+    {
+      "round": 6,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [lite]",
+      "ms": 5.4907
+    },
+    {
+      "round": 6,
+      "products": 1000,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [lite]",
+      "ms": 7.6509
+    },
+    {
+      "round": 6,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "selectolax",
+      "ms": 26.2033
+    },
+    {
+      "round": 6,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "bs4 + lxml",
+      "ms": 536.8856
+    },
+    {
+      "round": 6,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "selectolax",
+      "ms": 46.4616
+    },
+    {
+      "round": 6,
+      "products": 1000,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [stream]",
+      "ms": 8.517
+    },
+    {
+      "round": 6,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [stream]",
+      "ms": 7.6572
+    },
+    {
+      "round": 6,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "bs4 + html.parser",
+      "ms": 889.7108
+    },
+    {
+      "round": 6,
+      "products": 1000,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [scraper]",
+      "ms": 20.9878
+    },
+    {
+      "round": 6,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [scraper]",
+      "ms": 20.6545
+    },
+    {
+      "round": 6,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [lite]",
+      "ms": 7.5295
+    },
+    {
+      "round": 6,
+      "products": 1000,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [lite]",
+      "ms": 6.9662
+    },
+    {
+      "round": 6,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "parsel",
+      "ms": 138.4276
+    },
+    {
+      "round": 7,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "bs4 + lxml",
+      "ms": 567.5109
+    },
+    {
+      "round": 7,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [scraper]",
+      "ms": 23.7031
+    },
+    {
+      "round": 7,
+      "products": 1000,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [scraper]",
+      "ms": 31.1909
+    },
+    {
+      "round": 7,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "selectolax",
+      "ms": 37.9912
+    },
+    {
+      "round": 7,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "bs4 + html.parser",
+      "ms": 657.3245
+    },
+    {
+      "round": 7,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [stream]",
+      "ms": 4.9088
+    },
+    {
+      "round": 7,
+      "products": 1000,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [stream]",
+      "ms": 5.423
+    },
+    {
+      "round": 7,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "parsel",
+      "ms": 165.7195
+    },
+    {
+      "round": 7,
+      "products": 1000,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [lite]",
+      "ms": 8.2867
+    },
+    {
+      "round": 7,
+      "products": 1000,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [lite]",
+      "ms": 6.6055
+    },
+    {
+      "round": 7,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "bs4 + lxml",
+      "ms": 372.177
+    },
+    {
+      "round": 7,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [scraper]",
+      "ms": 13.4244
+    },
+    {
+      "round": 7,
+      "products": 1000,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [scraper]",
+      "ms": 17.9246
+    },
+    {
+      "round": 7,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [stream]",
+      "ms": 4.7211
+    },
+    {
+      "round": 7,
+      "products": 1000,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [stream]",
+      "ms": 4.71
+    },
+    {
+      "round": 7,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "selectolax",
+      "ms": 33.8592
+    },
+    {
+      "round": 7,
+      "products": 1000,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [lite]",
+      "ms": 6.8891
+    },
+    {
+      "round": 7,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [lite]",
+      "ms": 6.2825
+    },
+    {
+      "round": 7,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "parsel",
+      "ms": 161.1745
+    },
+    {
+      "round": 7,
+      "products": 1000,
+      "noise": false,
+      "version": "v7",
+      "case": "bs4 + html.parser",
+      "ms": 440.7054
+    },
+    {
+      "round": 7,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "bs4 + lxml",
+      "ms": 6232.1977
+    },
+    {
+      "round": 7,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "bs4 + html.parser",
+      "ms": 6541.8789
+    },
+    {
+      "round": 7,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [scraper]",
+      "ms": 218.4602
+    },
+    {
+      "round": 7,
+      "products": 10000,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [scraper]",
+      "ms": 281.5153
+    },
+    {
+      "round": 7,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "parsel",
+      "ms": 1499.5836
+    },
+    {
+      "round": 7,
+      "products": 10000,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [lite]",
+      "ms": 76.9492
+    },
+    {
+      "round": 7,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [lite]",
+      "ms": 72.8638
+    },
+    {
+      "round": 7,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "selectolax",
+      "ms": 388.0886
+    },
+    {
+      "round": 7,
+      "products": 10000,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [stream]",
+      "ms": 53.7521
+    },
+    {
+      "round": 7,
+      "products": 10000,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [stream]",
+      "ms": 75.1437
+    },
+    {
+      "round": 7,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [lite]",
+      "ms": 0.7045
+    },
+    {
+      "round": 7,
+      "products": 100,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [lite]",
+      "ms": 0.7555
+    },
+    {
+      "round": 7,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "selectolax",
+      "ms": 4.5647
+    },
+    {
+      "round": 7,
+      "products": 100,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [scraper]",
+      "ms": 1.7769
+    },
+    {
+      "round": 7,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [scraper]",
+      "ms": 1.8451
+    },
+    {
+      "round": 7,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "parsel",
+      "ms": 14.9323
+    },
+    {
+      "round": 7,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [stream]",
+      "ms": 0.5412
+    },
+    {
+      "round": 7,
+      "products": 100,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [stream]",
+      "ms": 0.5605
+    },
+    {
+      "round": 7,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "bs4 + lxml",
+      "ms": 53.0673
+    },
+    {
+      "round": 7,
+      "products": 100,
+      "noise": false,
+      "version": "v7",
+      "case": "bs4 + html.parser",
+      "ms": 49.3509
+    },
+    {
+      "round": 7,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "parsel",
+      "ms": 1839.0224
+    },
+    {
+      "round": 7,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [lite]",
+      "ms": 63.6753
+    },
+    {
+      "round": 7,
+      "products": 10000,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [lite]",
+      "ms": 65.1998
+    },
+    {
+      "round": 7,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "bs4 + html.parser",
+      "ms": 4623.2689
+    },
+    {
+      "round": 7,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [scraper]",
+      "ms": 140.002
+    },
+    {
+      "round": 7,
+      "products": 10000,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [scraper]",
+      "ms": 182.1484
+    },
+    {
+      "round": 7,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "bs4 + lxml",
+      "ms": 3684.9738
+    },
+    {
+      "round": 7,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "selectolax",
+      "ms": 532.1345
+    },
+    {
+      "round": 7,
+      "products": 10000,
+      "noise": false,
+      "version": "v6",
+      "case": "oxide_parse [stream]",
+      "ms": 49.353
+    },
+    {
+      "round": 7,
+      "products": 10000,
+      "noise": false,
+      "version": "v7",
+      "case": "oxide_parse [stream]",
+      "ms": 44.407
+    },
+    {
+      "round": 7,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "selectolax",
+      "ms": 4.2314
+    },
+    {
+      "round": 7,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "parsel",
+      "ms": 14.5216
+    },
+    {
+      "round": 7,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [lite]",
+      "ms": 0.6566
+    },
+    {
+      "round": 7,
+      "products": 100,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [lite]",
+      "ms": 1.2866
+    },
+    {
+      "round": 7,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "bs4 + lxml",
+      "ms": 67.5939
+    },
+    {
+      "round": 7,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "bs4 + html.parser",
+      "ms": 75.3402
+    },
+    {
+      "round": 7,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [scraper]",
+      "ms": 3.1925
+    },
+    {
+      "round": 7,
+      "products": 100,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [scraper]",
+      "ms": 3.089
+    },
+    {
+      "round": 7,
+      "products": 100,
+      "noise": true,
+      "version": "v6",
+      "case": "oxide_parse [stream]",
+      "ms": 0.5133
+    },
+    {
+      "round": 7,
+      "products": 100,
+      "noise": true,
+      "version": "v7",
+      "case": "oxide_parse [stream]",
+      "ms": 0.6445
+    }
+  ],
+  "measurement": "parse + extract + Python objects; precompiled plans; GC collection/equality/deletion/IPC outside timer",
+  "versions": {
+    "beautifulsoup4": "4.15.0",
+    "lxml": "6.1.3",
+    "parsel": "1.12.1",
+    "selectolax": "1.0.2"
+  },
+  "source_commit": "a110cf3b4d964540110a6df7cc226ecc6b405667",
+  "source_files_sha256": {
+    "crates/core/Cargo.toml": "b1b274541ceedd590812a3ea7c10bc5864f0007d3a9fde1dafea8fb33185e851",
+    "crates/py/Cargo.toml": "4b50b05bd73d9c7399871a00bccccca63561bffec13dd1cdbdfd9ee1c66ac582",
+    "crates/py/src/lib.rs": "3088e787763dabcbc19ce8d8d812120e1599f4244c283b240a7a4d6a5238348a",
+    "crates/core/benches/engines.rs": "34cbcfd2233e1015766a037c0cbea14b0b45a5366ee94d782939e1e142dd29c5",
+    "crates/core/benches/extract.rs": "055296875b23a41af458c583e237f2ccf9b3c787c72a5f2441b43a6125261180",
+    "crates/core/benches/stages.rs": "350c7181c0f135037d8b38c0ae60da1785207437cb013bddb8f9d9650d2d5a90",
+    "crates/core/examples/basic.rs": "cafbf8ac777ea5926ee450ae31e0517f737c9e2927b07432c43189ca19c1107b",
+    "crates/core/examples/engines.rs": "9d588378c0cf2a54547242bd3798701556cb076b34a12a31b97b6f0ffbea5d4d",
+    "crates/core/examples/follow.rs": "143c22e6750533a10a017f8230b8bb95d6345958af364e769eeef72efe552a4d",
+    "crates/core/examples/json.rs": "0e38cd7e47d6d9f265504bfc879cd4c78874c4d80f0dcb43bfbe77cfc64d4d0e",
+    "crates/core/src/adaptive.rs": "4ff6cc96aff19508244d6571c1550d4500d08f8c606301cf2e258145f2b5306b",
+    "crates/core/src/dom.rs": "c7fd8d7cc90a569436f7e8f79218a1ab743a5eb7e169ab28feba4f51a0eee0e4",
+    "crates/core/src/engine.rs": "94fe43bcaef809a8f1333e9dcfe9c3b0147d97e5be42c43f50a67af38d7e7f9a",
+    "crates/core/src/error.rs": "c0c56880d92a376cd4f9869d57c1fcbe138c6ebce4262b356866d5104f6215bb",
+    "crates/core/src/exec.rs": "e8dbb2867daad70a5ee2a399de0e0e8d6b85d7c63cdb4743e3527d728602e135",
+    "crates/core/src/ir.rs": "f5e5b874a6cb42a0338dbc4f75bf6aca8efc1ff8e7a945f3b3641aa9fc417f96",
+    "crates/core/src/lib.rs": "ebe766705063eaef006e8dd8d2fff45fa0e861c700ce86232afb69d7b293a3f0",
+    "crates/core/src/plan.rs": "8fefa4a03651a39b7e983488a114e71267e5e28218e4e75ee7d082d5dd5b2d13",
+    "crates/core/src/value.rs": "9d86268d78dda3c7a939a7ed0b5f459b79adb902a7669ab0756af6f066c950c9",
+    "crates/core/tests/basic.rs": "4a3043cdf1072ed36c78dd33d0f4999d5e8a6e6ada171956381ce1148a2df384",
+    "crates/core/tests/engines.rs": "4de090b9e9dca0339123449507913864be7fb4d2ad3d331d456a0de12d6e3308",
+    "crates/core/src/engines/json.rs": "48da71bd02d46c313031e096a8b94fc1a85fd0b4cb36923269e4e8d7b108f9f4",
+    "crates/core/src/engines/lite.rs": "8ee9cb36cf9a26d985579aed4d7c1029f9b38b964b242e58be5105436f12f196",
+    "crates/core/src/engines/mod.rs": "45bb314103592099e986d57a9cfd0b47130e48aa82aa98f4550d6225be72d685",
+    "crates/core/src/engines/scraper.rs": "d328399005a9453e01872b729f243ead7f0001efd554cf262cee2c99e401cd24",
+    "crates/core/src/engines/stream.rs": "e122d3fb26350d6e3d5d878e341b12d85e33434282e492082b0f7ac46a4995ad",
+    "crates/core/src/markup/arena.rs": "f4d0c573fae1728998d1fad2f5ff0c1e37be4508600ac4f0b7c47f344eb9fa3e",
+    "crates/core/src/markup/css.rs": "7eb83c5ea4e2bc5b150d400961fedcf82f7a917e87596fdf5fa301f1c9dad6eb",
+    "crates/core/src/markup/entities.rs": "b8604b2d1a21d86c538a4597fe2c444e0b03695a40dba3cdfa742f28575d58cd",
+    "crates/core/src/markup/events.rs": "93b3dadd653a4b191585f7e6c14ca0fe8bacbc03a96f983925d8d852aaecbc32",
+    "crates/core/src/markup/mod.rs": "bcbb73086f07d728f49dab1c9e54f5c923e8b93d13d9d244c1f0cbf4b401c7f4",
+    "crates/core/src/markup/tokenizer.rs": "40816ea3a8f7e5ec75df960ceaeaa291ec1ac967fe59e65e348635851748b335",
+    "crates/core/src/xpath/mod.rs": "8528101fb7aeacf8f4fc3b7306f4c2bc2aa33617c9a3126ec7a4a9203f7cfcc8",
+    "crates/core/src/xpath/parser.rs": "1a682f66eec72c170a76426fee902bb37f96d587577c3950845e6eca3d448fbd",
+    "python/oxide_parse/decompile.py": "f78cef997859742fc7f76d250481ec64b821b03c477db8357cb74892341cc585",
+    "python/oxide_parse/expr.py": "cfd966660219ca7266ea9398afaea81b79756aea1565eb4ebc4f746475f5741a",
+    "python/oxide_parse/plan.py": "63b9e05fbbd3c2b71078fc61c1ab86c86eba0bb415551c166e2c2f9d3e736d9d",
+    "python/oxide_parse/_core.pyi": "4cb746d868da58bc6d659dfb8878f51ac8b52fb6631e597bfd828e3eeed1fd60",
+    "python/oxide_parse/__init__.py": "8013fd28fb312e298cb4e3a44764bf230bd4b6b84f8e01b2846f127785fcc0e6",
+    "benches/bench_compare.py": "64354be1b17b08a1651d00f57beaebf6f48e5295bf718f47a809462f0cce88f2",
+    "benches/bench_python.py": "837964564b6639bcfbdfc11099e0c32a5a9a309032f260cd1a7247a14a1c06f0",
+    "benches/bench_suite.py": "1816dcfd9d73a851492a08d5777e4e9a9b1c3bd332e8e36b48835c8e681f6bee"
+  },
+  "harness_sha256": {
+    "bench_compare.py": "64354be1b17b08a1651d00f57beaebf6f48e5295bf718f47a809462f0cce88f2",
+    "bench_python.py": "837964564b6639bcfbdfc11099e0c32a5a9a309032f260cd1a7247a14a1c06f0"
+  },
+  "updated_utc": "2026-11-10T20:36:35.226401+00:00",
+  "summary": [
+    {
+      "products": 100,
+      "noise": false,
+      "results": {
+        "v6: oxide_parse [lite]": {
+          "samples_ms": [
+            0.6127,
+            0.6897,
+            0.7844,
+            0.6988,
+            0.7614,
+            0.7308,
+            0.7555
+          ],
+          "median_ms": 0.7308,
+          "min_ms": 0.6127,
+          "max_ms": 0.7844
+        },
+        "v6: oxide_parse [stream]": {
+          "samples_ms": [
+            0.4467,
+            1.0741,
+            0.4135,
+            0.4365,
+            0.4283,
+            0.5312,
+            0.5605
+          ],
+          "median_ms": 0.4467,
+          "min_ms": 0.4135,
+          "max_ms": 1.0741
+        },
+        "v6: oxide_parse [scraper]": {
+          "samples_ms": [
+            1.2162,
+            1.9642,
+            1.5762,
+            1.4063,
+            1.8124,
+            1.8729,
+            1.7769
+          ],
+          "median_ms": 1.7769,
+          "min_ms": 1.2162,
+          "max_ms": 1.9642
+        },
+        "v7: oxide_parse [lite]": {
+          "samples_ms": [
+            0.5314,
+            0.6785,
+            0.7425,
+            0.9772,
+            0.5882,
+            0.6952,
+            0.7045
+          ],
+          "median_ms": 0.6952,
+          "min_ms": 0.5314,
+          "max_ms": 0.9772
+        },
+        "v7: oxide_parse [stream]": {
+          "samples_ms": [
+            0.5059,
+            0.4754,
+            0.5207,
+            0.448,
+            0.388,
+            0.4391,
+            0.5412
+          ],
+          "median_ms": 0.4754,
+          "min_ms": 0.388,
+          "max_ms": 0.5412
+        },
+        "v7: oxide_parse [scraper]": {
+          "samples_ms": [
+            1.2036,
+            2.3563,
+            1.3651,
+            1.6572,
+            2.2664,
+            1.97,
+            1.8451
+          ],
+          "median_ms": 1.8451,
+          "min_ms": 1.2036,
+          "max_ms": 2.3563
+        },
+        "v7: selectolax": {
+          "samples_ms": [
+            2.4448,
+            2.6412,
+            4.7336,
+            3.113,
+            5.111,
+            3.1556,
+            4.5647
+          ],
+          "median_ms": 3.1556,
+          "min_ms": 2.4448,
+          "max_ms": 5.111
+        },
+        "v7: parsel": {
+          "samples_ms": [
+            14.9881,
+            16.7062,
+            16.0576,
+            13.2576,
+            14.3063,
+            15.456,
+            14.9323
+          ],
+          "median_ms": 14.9881,
+          "min_ms": 13.2576,
+          "max_ms": 16.7062
+        },
+        "v7: bs4 + lxml": {
+          "samples_ms": [
+            33.0892,
+            35.5347,
+            41.2859,
+            44.04,
+            38.1007,
+            32.1269,
+            53.0673
+          ],
+          "median_ms": 38.1007,
+          "min_ms": 32.1269,
+          "max_ms": 53.0673
+        },
+        "v7: bs4 + html.parser": {
+          "samples_ms": [
+            60.0075,
+            38.3592,
+            39.8606,
+            46.4203,
+            34.9822,
+            37.5055,
+            49.3509
+          ],
+          "median_ms": 39.8606,
+          "min_ms": 34.9822,
+          "max_ms": 60.0075
+        }
+      },
+      "paired": {
+        "oxide_parse [lite]": {
+          "ratios_v6_over_v7": [
+            1.1529920963492661,
+            1.0165070007369197,
+            1.0564309764309763,
+            0.7151043798608269,
+            1.2944576674600476,
+            1.0512082853855005,
+            1.0723917672107877
+          ],
+          "median_ratio": 1.0564309764309763,
+          "v7_faster_pairs": 6
+        },
+        "oxide_parse [stream]": {
+          "ratios_v6_over_v7": [
+            0.882980826250247,
+            2.2593605384939,
+            0.7941232955636642,
+            0.9743303571428571,
+            1.1038659793814434,
+            1.2097472102026874,
+            1.0356614929785661
+          ],
+          "median_ratio": 1.0356614929785661,
+          "v7_faster_pairs": 4
+        },
+        "oxide_parse [scraper]": {
+          "ratios_v6_over_v7": [
+            1.010468594217348,
+            0.833595043076009,
+            1.1546406856640539,
+            0.8486000482741975,
+            0.7996823155665372,
+            0.9507106598984771,
+            0.9630372337542681
+          ],
+          "median_ratio": 0.9507106598984771,
+          "v7_faster_pairs": 2
+        }
+      }
+    },
+    {
+      "products": 100,
+      "noise": true,
+      "results": {
+        "v6: oxide_parse [lite]": {
+          "samples_ms": [
+            0.9288,
+            0.9647,
+            0.8419,
+            0.84,
+            0.9655,
+            0.9228,
+            1.2866
+          ],
+          "median_ms": 0.9288,
+          "min_ms": 0.84,
+          "max_ms": 1.2866
+        },
+        "v6: oxide_parse [stream]": {
+          "samples_ms": [
+            0.7348,
+            0.7515,
+            0.7091,
+            0.6054,
+            0.9684,
+            1.0062,
+            0.5133
+          ],
+          "median_ms": 0.7348,
+          "min_ms": 0.5133,
+          "max_ms": 1.0062
+        },
+        "v6: oxide_parse [scraper]": {
+          "samples_ms": [
+            6.2074,
+            2.9721,
+            3.7051,
+            2.5376,
+            4.706,
+            2.5755,
+            3.089
+          ],
+          "median_ms": 3.089,
+          "min_ms": 2.5376,
+          "max_ms": 6.2074
+        },
+        "v7: oxide_parse [lite]": {
+          "samples_ms": [
+            1.1878,
+            0.7007,
+            0.7249,
+            1.2268,
+            0.8003,
+            0.8857,
+            0.6566
+          ],
+          "median_ms": 0.8003,
+          "min_ms": 0.6566,
+          "max_ms": 1.2268
+        },
+        "v7: oxide_parse [stream]": {
+          "samples_ms": [
+            0.7201,
+            0.7444,
+            0.74,
+            0.5377,
+            0.6419,
+            0.7621,
+            0.6445
+          ],
+          "median_ms": 0.7201,
+          "min_ms": 0.5377,
+          "max_ms": 0.7621
+        },
+        "v7: oxide_parse [scraper]": {
+          "samples_ms": [
+            3.0678,
+            2.4953,
+            3.557,
+            1.9812,
+            2.6605,
+            2.2627,
+            3.1925
+          ],
+          "median_ms": 2.6605,
+          "min_ms": 1.9812,
+          "max_ms": 3.557
+        },
+        "v7: selectolax": {
+          "samples_ms": [
+            4.1026,
+            4.2863,
+            5.2813,
+            5.6538,
+            4.4035,
+            4.4725,
+            4.2314
+          ],
+          "median_ms": 4.4035,
+          "min_ms": 4.1026,
+          "max_ms": 5.6538
+        },
+        "v7: parsel": {
+          "samples_ms": [
+            22.025,
+            18.0651,
+            13.6845,
+            20.2721,
+            16.1415,
+            19.9566,
+            14.5216
+          ],
+          "median_ms": 18.0651,
+          "min_ms": 13.6845,
+          "max_ms": 22.025
+        },
+        "v7: bs4 + lxml": {
+          "samples_ms": [
+            118.0462,
+            82.4848,
+            50.4967,
+            74.8159,
+            51.4107,
+            69.736,
+            67.5939
+          ],
+          "median_ms": 69.736,
+          "min_ms": 50.4967,
+          "max_ms": 118.0462
+        },
+        "v7: bs4 + html.parser": {
+          "samples_ms": [
+            79.4044,
+            78.9482,
+            63.4381,
+            113.8658,
+            79.4713,
+            57.065,
+            75.3402
+          ],
+          "median_ms": 78.9482,
+          "min_ms": 57.065,
+          "max_ms": 113.8658
+        }
+      },
+      "paired": {
+        "oxide_parse [lite]": {
+          "ratios_v6_over_v7": [
+            0.7819498232025593,
+            1.3767660910518054,
+            1.1614015726307076,
+            0.6847081838930551,
+            1.206422591528177,
+            1.0418877723834254,
+            1.9594882729211087
+          ],
+          "median_ratio": 1.1614015726307076,
+          "v7_faster_pairs": 5
+        },
+        "oxide_parse [stream]": {
+          "ratios_v6_over_v7": [
+            1.020413831412304,
+            1.009537882858678,
+            0.9582432432432432,
+            1.1259066393899946,
+            1.5086462065742328,
+            1.3202991733368323,
+            0.7964313421256788
+          ],
+          "median_ratio": 1.020413831412304,
+          "v7_faster_pairs": 5
+        },
+        "oxide_parse [scraper]": {
+          "ratios_v6_over_v7": [
+            2.0234043940282938,
+            1.1910792289504268,
+            1.0416362102895698,
+            1.2808398950131232,
+            1.7688404435256533,
+            1.1382419233658903,
+            0.9675802662490212
+          ],
+          "median_ratio": 1.1910792289504268,
+          "v7_faster_pairs": 6
+        }
+      }
+    },
+    {
+      "products": 1000,
+      "noise": false,
+      "results": {
+        "v6: oxide_parse [lite]": {
+          "samples_ms": [
+            7.2921,
+            9.2846,
+            8.4836,
+            7.0302,
+            7.1472,
+            7.6509,
+            6.8891
+          ],
+          "median_ms": 7.2921,
+          "min_ms": 6.8891,
+          "max_ms": 9.2846
+        },
+        "v6: oxide_parse [stream]": {
+          "samples_ms": [
+            6.2446,
+            3.6826,
+            4.4083,
+            6.3902,
+            5.2823,
+            6.9162,
+            4.71
+          ],
+          "median_ms": 5.2823,
+          "min_ms": 3.6826,
+          "max_ms": 6.9162
+        },
+        "v6: oxide_parse [scraper]": {
+          "samples_ms": [
+            20.3093,
+            18.0865,
+            14.9247,
+            19.8091,
+            14.099,
+            17.5023,
+            17.9246
+          ],
+          "median_ms": 17.9246,
+          "min_ms": 14.099,
+          "max_ms": 20.3093
+        },
+        "v7: oxide_parse [lite]": {
+          "samples_ms": [
+            8.9593,
+            7.2459,
+            6.5268,
+            6.4132,
+            6.3742,
+            5.4907,
+            6.2825
+          ],
+          "median_ms": 6.4132,
+          "min_ms": 5.4907,
+          "max_ms": 8.9593
+        },
+        "v7: oxide_parse [stream]": {
+          "samples_ms": [
+            6.1438,
+            3.3984,
+            4.5564,
+            5.6888,
+            3.3842,
+            4.5884,
+            4.7211
+          ],
+          "median_ms": 4.5884,
+          "min_ms": 3.3842,
+          "max_ms": 6.1438
+        },
+        "v7: oxide_parse [scraper]": {
+          "samples_ms": [
+            17.8318,
+            18.6741,
+            12.3667,
+            19.2372,
+            14.5998,
+            14.7851,
+            13.4244
+          ],
+          "median_ms": 14.7851,
+          "min_ms": 12.3667,
+          "max_ms": 19.2372
+        },
+        "v7: selectolax": {
+          "samples_ms": [
+            43.7351,
+            27.1408,
+            29.6181,
+            38.5626,
+            30.3319,
+            26.2033,
+            33.8592
+          ],
+          "median_ms": 30.3319,
+          "min_ms": 26.2033,
+          "max_ms": 43.7351
+        },
+        "v7: parsel": {
+          "samples_ms": [
+            260.2682,
+            141.0296,
+            159.0175,
+            301.7967,
+            140.0767,
+            125.3619,
+            161.1745
+          ],
+          "median_ms": 159.0175,
+          "min_ms": 125.3619,
+          "max_ms": 301.7967
+        },
+        "v7: bs4 + lxml": {
+          "samples_ms": [
+            1241.3005,
+            376.9407,
+            580.6238,
+            339.5428,
+            357.4214,
+            367.7092,
+            372.177
+          ],
+          "median_ms": 372.177,
+          "min_ms": 339.5428,
+          "max_ms": 1241.3005
+        },
+        "v7: bs4 + html.parser": {
+          "samples_ms": [
+            2183.8142,
+            427.7828,
+            444.2206,
+            387.0571,
+            380.763,
+            492.6177,
+            440.7054
+          ],
+          "median_ms": 440.7054,
+          "min_ms": 380.763,
+          "max_ms": 2183.8142
+        }
+      },
+      "paired": {
+        "oxide_parse [lite]": {
+          "ratios_v6_over_v7": [
+            0.8139140334624355,
+            1.2813591134296636,
+            1.2998100140957283,
+            1.0962078213684276,
+            1.121270120171943,
+            1.3934288888484163,
+            1.0965539196179865
+          ],
+          "median_ratio": 1.121270120171943,
+          "v7_faster_pairs": 6
+        },
+        "oxide_parse [stream]": {
+          "ratios_v6_over_v7": [
+            1.0164067840750026,
+            1.0836275894538605,
+            0.9674962689842858,
+            1.1232948952327382,
+            1.5608711069085752,
+            1.5073228140528288,
+            0.9976488530215416
+          ],
+          "median_ratio": 1.0836275894538605,
+          "v7_faster_pairs": 5
+        },
+        "oxide_parse [scraper]": {
+          "ratios_v6_over_v7": [
+            1.1389371796453527,
+            0.96853395879855,
+            1.2068458036501248,
+            1.029728858669661,
+            0.9656981602487705,
+            1.1837796159647214,
+            1.3352254104466494
+          ],
+          "median_ratio": 1.1389371796453527,
+          "v7_faster_pairs": 5
+        }
+      }
+    },
+    {
+      "products": 1000,
+      "noise": true,
+      "results": {
+        "v6: oxide_parse [lite]": {
+          "samples_ms": [
+            9.6756,
+            13.0373,
+            10.3111,
+            6.4447,
+            9.4124,
+            6.9662,
+            8.2867
+          ],
+          "median_ms": 9.4124,
+          "min_ms": 6.4447,
+          "max_ms": 13.0373
+        },
+        "v6: oxide_parse [stream]": {
+          "samples_ms": [
+            6.2394,
+            9.1793,
+            6.3527,
+            5.6811,
+            7.1086,
+            8.517,
+            5.423
+          ],
+          "median_ms": 6.3527,
+          "min_ms": 5.423,
+          "max_ms": 9.1793
+        },
+        "v6: oxide_parse [scraper]": {
+          "samples_ms": [
+            35.1643,
+            31.4451,
+            25.6556,
+            28.2145,
+            22.08,
+            20.9878,
+            31.1909
+          ],
+          "median_ms": 28.2145,
+          "min_ms": 20.9878,
+          "max_ms": 35.1643
+        },
+        "v7: oxide_parse [lite]": {
+          "samples_ms": [
+            14.8401,
+            8.2176,
+            6.5915,
+            7.9504,
+            7.293,
+            7.5295,
+            6.6055
+          ],
+          "median_ms": 7.5295,
+          "min_ms": 6.5915,
+          "max_ms": 14.8401
+        },
+        "v7: oxide_parse [stream]": {
+          "samples_ms": [
+            5.3315,
+            7.5638,
+            5.1105,
+            6.2134,
+            8.4006,
+            7.6572,
+            4.9088
+          ],
+          "median_ms": 6.2134,
+          "min_ms": 4.9088,
+          "max_ms": 8.4006
+        },
+        "v7: oxide_parse [scraper]": {
+          "samples_ms": [
+            30.5171,
+            73.9039,
+            19.92,
+            19.9122,
+            24.6778,
+            20.6545,
+            23.7031
+          ],
+          "median_ms": 23.7031,
+          "min_ms": 19.9122,
+          "max_ms": 73.9039
+        },
+        "v7: selectolax": {
+          "samples_ms": [
+            29.8563,
+            48.8454,
+            40.0939,
+            32.8645,
+            39.8538,
+            46.4616,
+            37.9912
+          ],
+          "median_ms": 39.8538,
+          "min_ms": 29.8563,
+          "max_ms": 48.8454
+        },
+        "v7: parsel": {
+          "samples_ms": [
+            134.3265,
+            293.2446,
+            170.2238,
+            144.8001,
+            138.0984,
+            138.4276,
+            165.7195
+          ],
+          "median_ms": 144.8001,
+          "min_ms": 134.3265,
+          "max_ms": 293.2446
+        },
+        "v7: bs4 + lxml": {
+          "samples_ms": [
+            627.0216,
+            1300.2915,
+            663.0104,
+            611.9492,
+            636.1849,
+            536.8856,
+            567.5109
+          ],
+          "median_ms": 627.0216,
+          "min_ms": 536.8856,
+          "max_ms": 1300.2915
+        },
+        "v7: bs4 + html.parser": {
+          "samples_ms": [
+            749.8349,
+            3824.5942,
+            611.0375,
+            774.9548,
+            590.0951,
+            889.7108,
+            657.3245
+          ],
+          "median_ms": 749.8349,
+          "min_ms": 590.0951,
+          "max_ms": 3824.5942
+        }
+      },
+      "paired": {
+        "oxide_parse [lite]": {
+          "ratios_v6_over_v7": [
+            0.6519902156993551,
+            1.5865094431464177,
+            1.5643025108093758,
+            0.8106133024753471,
+            1.2906074317839022,
+            0.9251875954578658,
+            1.2545151767466505
+          ],
+          "median_ratio": 1.2545151767466505,
+          "v7_faster_pairs": 4
+        },
+        "oxide_parse [stream]": {
+          "ratios_v6_over_v7": [
+            1.1702897871143205,
+            1.2135831195959703,
+            1.2430681929361118,
+            0.9143303183442237,
+            0.8462014618003475,
+            1.1122864754740636,
+            1.1047506518904824
+          ],
+          "median_ratio": 1.1122864754740636,
+          "v7_faster_pairs": 5
+        },
+        "oxide_parse [scraper]": {
+          "ratios_v6_over_v7": [
+            1.152281835429972,
+            0.4254863410456012,
+            1.2879317269076305,
+            1.4169453902632558,
+            0.894731296955158,
+            1.0161369193154035,
+            1.315899608068143
+          ],
+          "median_ratio": 1.152281835429972,
+          "v7_faster_pairs": 5
+        }
+      }
+    },
+    {
+      "products": 10000,
+      "noise": false,
+      "results": {
+        "v6: oxide_parse [lite]": {
+          "samples_ms": [
+            62.5481,
+            66.4162,
+            83.9827,
+            71.5693,
+            64.7016,
+            57.4432,
+            65.1998
+          ],
+          "median_ms": 65.1998,
+          "min_ms": 57.4432,
+          "max_ms": 83.9827
+        },
+        "v6: oxide_parse [stream]": {
+          "samples_ms": [
+            42.9126,
+            47.7501,
+            52.8742,
+            41.2676,
+            76.5816,
+            42.4196,
+            49.353
+          ],
+          "median_ms": 47.7501,
+          "min_ms": 41.2676,
+          "max_ms": 76.5816
+        },
+        "v6: oxide_parse [scraper]": {
+          "samples_ms": [
+            4607.2408,
+            144.7004,
+            143.664,
+            174.9225,
+            200.5492,
+            162.8833,
+            182.1484
+          ],
+          "median_ms": 174.9225,
+          "min_ms": 143.664,
+          "max_ms": 4607.2408
+        },
+        "v7: oxide_parse [lite]": {
+          "samples_ms": [
+            65.838,
+            64.3879,
+            59.7363,
+            53.6306,
+            54.4638,
+            81.1108,
+            63.6753
+          ],
+          "median_ms": 63.6753,
+          "min_ms": 53.6306,
+          "max_ms": 81.1108
+        },
+        "v7: oxide_parse [stream]": {
+          "samples_ms": [
+            40.3618,
+            50.1289,
+            41.1617,
+            60.4079,
+            55.9071,
+            48.21,
+            44.407
+          ],
+          "median_ms": 48.21,
+          "min_ms": 40.3618,
+          "max_ms": 60.4079
+        },
+        "v7: oxide_parse [scraper]": {
+          "samples_ms": [
+            186.5803,
+            148.636,
+            165.903,
+            244.576,
+            171.2189,
+            129.6303,
+            140.002
+          ],
+          "median_ms": 165.903,
+          "min_ms": 129.6303,
+          "max_ms": 244.576
+        },
+        "v7: selectolax": {
+          "samples_ms": [
+            338.7714,
+            286.6598,
+            266.743,
+            323.895,
+            282.6285,
+            322.1204,
+            532.1345
+          ],
+          "median_ms": 322.1204,
+          "min_ms": 266.743,
+          "max_ms": 532.1345
+        },
+        "v7: parsel": {
+          "samples_ms": [
+            1605.4074,
+            1917.7251,
+            1324.8779,
+            1486.9906,
+            1315.7548,
+            1335.3122,
+            1839.0224
+          ],
+          "median_ms": 1486.9906,
+          "min_ms": 1315.7548,
+          "max_ms": 1917.7251
+        },
+        "v7: bs4 + lxml": {
+          "samples_ms": [
+            4192.5105,
+            3703.5355,
+            3912.1991,
+            3625.4218,
+            3725.1564,
+            3455.8516,
+            3684.9738
+          ],
+          "median_ms": 3703.5355,
+          "min_ms": 3455.8516,
+          "max_ms": 4192.5105
+        },
+        "v7: bs4 + html.parser": {
+          "samples_ms": [
+            5714.4926,
+            4405.1378,
+            3776.8028,
+            3896.3227,
+            3863.8006,
+            3647.5813,
+            4623.2689
+          ],
+          "median_ms": 3896.3227,
+          "min_ms": 3647.5813,
+          "max_ms": 5714.4926
+        }
+      },
+      "paired": {
+        "oxide_parse [lite]": {
+          "ratios_v6_over_v7": [
+            0.9500303775934871,
+            1.031501260329969,
+            1.4058905556587868,
+            1.3344862820852275,
+            1.187974397673317,
+            0.708206552025131,
+            1.0239417796225538
+          ],
+          "median_ratio": 1.031501260329969,
+          "v7_faster_pairs": 5
+        },
+        "oxide_parse [stream]": {
+          "ratios_v6_over_v7": [
+            1.0631983707366865,
+            0.95254633554696,
+            1.284548500183423,
+            0.6831490583185312,
+            1.369800973400516,
+            0.8798921385604647,
+            1.1113788366698945
+          ],
+          "median_ratio": 1.0631983707366865,
+          "v7_faster_pairs": 4
+        },
+        "oxide_parse [scraper]": {
+          "ratios_v6_over_v7": [
+            24.69307209817971,
+            0.9735218924082996,
+            0.8659517911068516,
+            0.7152071339788042,
+            1.1713029344307202,
+            1.2565218162728928,
+            1.30104141369409
+          ],
+          "median_ratio": 1.1713029344307202,
+          "v7_faster_pairs": 4
+        }
+      }
+    },
+    {
+      "products": 10000,
+      "noise": true,
+      "results": {
+        "v6: oxide_parse [lite]": {
+          "samples_ms": [
+            104.7146,
+            94.5394,
+            70.7594,
+            74.338,
+            70.1828,
+            75.5532,
+            76.9492
+          ],
+          "median_ms": 75.5532,
+          "min_ms": 70.1828,
+          "max_ms": 104.7146
+        },
+        "v6: oxide_parse [stream]": {
+          "samples_ms": [
+            51.3013,
+            117.8153,
+            53.0315,
+            62.5754,
+            53.7913,
+            50.0864,
+            53.7521
+          ],
+          "median_ms": 53.7521,
+          "min_ms": 50.0864,
+          "max_ms": 117.8153
+        },
+        "v6: oxide_parse [scraper]": {
+          "samples_ms": [
+            830.3718,
+            260.2645,
+            261.9226,
+            310.1659,
+            277.2655,
+            232.8804,
+            281.5153
+          ],
+          "median_ms": 277.2655,
+          "min_ms": 232.8804,
+          "max_ms": 830.3718
+        },
+        "v7: oxide_parse [lite]": {
+          "samples_ms": [
+            96.2017,
+            64.9247,
+            76.7238,
+            68.24,
+            79.774,
+            76.2271,
+            72.8638
+          ],
+          "median_ms": 76.2271,
+          "min_ms": 64.9247,
+          "max_ms": 96.2017
+        },
+        "v7: oxide_parse [stream]": {
+          "samples_ms": [
+            53.4354,
+            64.4885,
+            87.4372,
+            47.6655,
+            49.2375,
+            49.4101,
+            75.1437
+          ],
+          "median_ms": 53.4354,
+          "min_ms": 47.6655,
+          "max_ms": 87.4372
+        },
+        "v7: oxide_parse [scraper]": {
+          "samples_ms": [
+            272.6903,
+            209.4859,
+            248.7441,
+            219.0426,
+            281.7444,
+            307.0434,
+            218.4602
+          ],
+          "median_ms": 248.7441,
+          "min_ms": 209.4859,
+          "max_ms": 307.0434
+        },
+        "v7: selectolax": {
+          "samples_ms": [
+            658.9717,
+            329.449,
+            331.6056,
+            361.0615,
+            363.6735,
+            340.7042,
+            388.0886
+          ],
+          "median_ms": 361.0615,
+          "min_ms": 329.449,
+          "max_ms": 658.9717
+        },
+        "v7: parsel": {
+          "samples_ms": [
+            2597.4668,
+            2006.8472,
+            2046.6806,
+            1654.1264,
+            2014.8003,
+            1578.9779,
+            1499.5836
+          ],
+          "median_ms": 2006.8472,
+          "min_ms": 1499.5836,
+          "max_ms": 2597.4668
+        },
+        "v7: bs4 + lxml": {
+          "samples_ms": [
+            6231.3428,
+            6474.6971,
+            6037.0214,
+            6131.8922,
+            7144.0968,
+            5972.2472,
+            6232.1977
+          ],
+          "median_ms": 6231.3428,
+          "min_ms": 5972.2472,
+          "max_ms": 7144.0968
+        },
+        "v7: bs4 + html.parser": {
+          "samples_ms": [
+            7504.3031,
+            6467.6871,
+            7249.8395,
+            8020.2067,
+            7715.6637,
+            7644.5698,
+            6541.8789
+          ],
+          "median_ms": 7504.3031,
+          "min_ms": 6467.6871,
+          "max_ms": 8020.2067
+        }
+      },
+      "paired": {
+        "oxide_parse [lite]": {
+          "ratios_v6_over_v7": [
+            1.0884901202369606,
+            1.456139188937338,
+            0.9222614104098077,
+            1.089361078546307,
+            0.8797703512422593,
+            0.9911593121081611,
+            1.0560689944801123
+          ],
+          "median_ratio": 1.0560689944801123,
+          "v7_faster_pairs": 4
+        },
+        "oxide_parse [stream]": {
+          "ratios_v6_over_v7": [
+            0.9600620562398708,
+            1.826919528287989,
+            0.6065095863088021,
+            1.3128027609067354,
+            1.0924864178725566,
+            1.0136874849474096,
+            0.7153241056801835
+          ],
+          "median_ratio": 1.0136874849474096,
+          "v7_faster_pairs": 4
+        },
+        "oxide_parse [scraper]": {
+          "ratios_v6_over_v7": [
+            3.0451094153330724,
+            1.2423962662880892,
+            1.0529801510870005,
+            1.4160072059042397,
+            0.9841029670864798,
+            0.7584608560223082,
+            1.288634268393053
+          ],
+          "median_ratio": 1.2423962662880892,
+          "v7_faster_pairs": 5
+        }
+      }
+    }
+  ],
+  "hardware": {
+    "cpu": {
+      "Name": "Intel(R) N97",
+      "NumberOfCores": 4,
+      "NumberOfLogicalProcessors": 4
+    },
+    "memory": {
+      "TotalPhysicalMemory": 16912232448
+    }
+  },
+  "baseline_commit": "a110cf3b4d964540110a6df7cc226ecc6b405667",
+  "candidate_archive_sha256": "00f92e0eda98b3f7cdebdacf1933b5e499cad17dbe6a5e516188a8899193562e"
+}

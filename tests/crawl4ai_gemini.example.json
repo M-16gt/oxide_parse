@@ -1,0 +1,9 @@
+{
+  "api_key": "",
+  "model": "gemini-3.5-flash-lite",
+  "url": "https://books.toscrape.com/",
+  "query": "Extract every book card on the page with its title, price, availability, and detail link href.",
+  "schema_type": "CSS",
+  "validate_schema": true,
+  "timeout_sec": 60
+}
